@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="slidingmenu_offset">40dp</dimen>
     <dimen name="list_padding">10dp</dimen>
     <dimen name="shadow_width">20dp</dimen>
 
@@ -9,5 +9,19 @@
 
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    
+    
+    <!--  
+    <dimen name=""></dimen>
+    Values for left dashboard
+    -->
+    <dimen name="left_linear_padding_top">40dp</dimen>
+    <dimen name="left_linear_padding_left">35dp</dimen>
+    <dimen name="left_linear_padding_bottom">40dp</dimen>
+    <dimen name="avatar_size">90dp</dimen>
+    <dimen name="margin_top">35dp</dimen> 
+    <dimen name="button_size">40dp</dimen>
+    <dimen name="button_margin">5dp</dimen>
 
 </resources>
