@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 public class LeftMenuFragment extends Fragment {
     String text = null;
@@ -25,8 +24,7 @@ public class LeftMenuFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_left_menu, null);
-        TextView textView =(TextView)view.findViewById(R.id.textView);
-        textView.setText("LeftMenu");
+
         return view;
     }
 
