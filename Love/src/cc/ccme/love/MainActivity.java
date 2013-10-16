@@ -13,7 +13,7 @@ import android.support.v4.app.FragmentTransaction;
 
 public class MainActivity extends SlidingFragmentActivity {
 
-	private SlidingMenu menuLeft,menuRight;
+	public static SlidingMenu menuLeft,menuRight;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
