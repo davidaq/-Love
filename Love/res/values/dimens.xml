@@ -23,5 +23,16 @@
     <dimen name="margin_top">35dp</dimen> 
     <dimen name="button_size">40dp</dimen>
     <dimen name="button_margin">5dp</dimen>
+    
+    <!-- 
+    Values for the broadcast
+     -->
+    <dimen name="item_space">20dp</dimen>
+    <dimen name="btn_size">30dp</dimen>
+    <dimen name="item_padding">12dp</dimen>
+    <dimen name="avatar_size_broadcast">50dp</dimen>
+    <dimen name="item_linear_padding">18dp</dimen>
+    <dimen name="item_btn_size">25dp</dimen>
+    <dimen name="item_text_width">30dp</dimen>
 
 </resources>

@@ -12,6 +12,21 @@
     <string name="testage">22岁</string>
     <string name="testnum">12</string>
     
+    <string name="testvideo">魅力中国</string>
+    <string name="testsound">我爱你中国</string>
+    <string name="testdate">2013.12.12 12:00:00</string>
+    <string name="testcount">12</string>
+    
+    <!-- Values for title -->
+    <string name="title_broadcast">广播流</string>
+    
+    <!-- Values for xlistview -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
     <!-- Values for left menu 
     
     <string name=""></string>
