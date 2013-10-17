@@ -3,66 +3,31 @@ package cc.ccme.love.fragment;
 import cc.ccme.love.R;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.TabHost;
 
 public class ContactFragment extends Fragment {
-    String text = null;
 
-    public ContactFragment() {
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setRetainInstance(true);
-    }
+	private TabHost tabHost;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_contact, null);
-        TextView textView =(TextView)view.findViewById(R.id.textView);
-        textView.setText("Contact");
+        LayoutInflater mInflater = LayoutInflater.from(getActivity()); 
+        final View tabSelectorSingle = mInflater.inflate(R.layout.tabselector_single, null);
+		final View tabSelectorGroup = mInflater.inflate(R.layout.tabselector_group, null);
+		final View tabSelectorSettings = mInflater.inflate(R.layout.tabselector_settings, null);
+		
+		//init view
+		tabHost = (TabHost) view.findViewById(android.R.id.tabhost);
+		tabHost.setup();
+		
+		tabHost.addTab(tabHost.newTabSpec("single").setIndicator(tabSelectorSingle).setContent(R.id.contact_single));
+		tabHost.addTab(tabHost.newTabSpec("group").setIndicator(tabSelectorGroup).setContent(R.id.contact_group));
+		tabHost.addTab(tabHost.newTabSpec("setings").setIndicator(tabSelectorSettings).setContent(R.id.contact_settings));
         return view;
     }
 
-    @Override
-    public void onDestroy() {
-        Log.e("Krislq", "onDestroy:"+ text);
-        super.onDestroy();
-    }
-
-    @Override
-    public void onDetach() {
-        Log.e("Krislq", "onDetach:"+ text);
-        super.onDetach();
-    }
-
-    @Override
-    public void onPause() {
-        Log.e("Krislq", "onPause:"+ text);
-        super.onPause();
-    }
-
-    @Override
-    public void onResume() {
-        Log.e("Krislq", "onResume:"+ text);
-        super.onResume();
-    }
-
-    @Override
-    public void onStart() {
-        Log.e("Krislq", "onStart:"+ text);
-        super.onStart();
-    }
-
-    @Override
-    public void onStop() {
-        Log.e("Krislq", "onStop:"+ text);
-        super.onStop();
-    }
-    
 }

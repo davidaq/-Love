@@ -20,6 +20,7 @@ public class MainActivity extends SlidingFragmentActivity {
         setContentView(R.layout.frame_broadcast);
         
         setBehindContentView(R.layout.frame_contact);
+       
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.contact, new ContactFragment());
         fragmentTransaction.replace(R.id.broadcast, new BroadcastFragment());
