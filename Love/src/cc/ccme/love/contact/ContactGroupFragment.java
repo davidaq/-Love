@@ -1,18 +1,18 @@
-package cc.ccme.love.fragment;
+package cc.ccme.love.contact;
 
+import cc.ccme.love.BaseFragment;
 import cc.ccme.love.R;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class ContactGroupFragment extends Fragment {
+public class ContactGroupFragment extends BaseFragment {
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_contact_group, null);
+        View view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_contact_group, null);
         return view;
     }
 

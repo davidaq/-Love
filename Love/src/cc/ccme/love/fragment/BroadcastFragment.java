@@ -1,10 +1,9 @@
 package cc.ccme.love.fragment;
 
-import cc.ccme.love.MainActivity;
+import cc.ccme.love.BaseFragment;
 import cc.ccme.love.R;
 import cc.ccme.widget.XListView;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -14,7 +13,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class BroadcastFragment extends Fragment implements OnClickListener {
+public class BroadcastFragment extends BaseFragment implements OnClickListener {
 
     private XListView listView;
     private BroadcastAdapter adapter;
@@ -119,10 +118,10 @@ public class BroadcastFragment extends Fragment implements OnClickListener {
 		switch(v.getId())
 		{
 		case R.id.btn_left_menu:
-			MainActivity.menuLeft.toggle();
+			leftToggle();
 			break;
 		case R.id.btn_contact:
-			MainActivity.menuRight.toggle();
+			rightToggle();
 			break;
 		}
 		

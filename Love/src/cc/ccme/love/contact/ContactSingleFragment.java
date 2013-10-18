@@ -1,18 +1,17 @@
-package cc.ccme.love.fragment;
+package cc.ccme.love.contact;
 
 import java.util.Arrays;
 import java.util.List;
+
+import cc.ccme.love.BaseFragment;
 import cc.ccme.love.R;
-import cc.ccme.love.contact.MySideBar;
-import cc.ccme.love.contact.MySideBar.OnTouchingLetterChangedListener;
-import cc.ccme.love.contact.MyUserInfoAdapter;
-import cc.ccme.love.contact.UserInfo;
 import cc.ccme.love.util.PinyinComparator;
 import cc.ccme.love.util.PinyinUtils;
+import cc.ccme.widget.MySideBar;
+import cc.ccme.widget.MySideBar.OnTouchingLetterChangedListener;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +19,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 @SuppressLint("HandlerLeak")
-public class ContactSingleFragment extends Fragment implements
+public class ContactSingleFragment extends BaseFragment implements
 OnTouchingLetterChangedListener {
 
 private ListView lvShow;
@@ -33,7 +32,7 @@ private OverlayThread overlayThread = new OverlayThread();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_contact, null);
+        View view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_contact_single, null);
         lvShow = (ListView) view.findViewById(R.id.lvShow);
 		myView = (MySideBar) view.findViewById(R.id.myView);
 

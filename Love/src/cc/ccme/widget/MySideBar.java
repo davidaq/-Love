@@ -1,4 +1,4 @@
-package cc.ccme.love.contact;
+package cc.ccme.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;

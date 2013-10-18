@@ -1,14 +1,14 @@
 package cc.ccme.love.fragment;
 
+import cc.ccme.love.BaseFragment;
 import cc.ccme.love.R;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TabHost;
 
-public class ContactFragment extends Fragment {
+public class ContactFragment extends BaseFragment {
 
 	private TabHost tabHost;
 
@@ -27,7 +27,8 @@ public class ContactFragment extends Fragment {
 		tabHost.addTab(tabHost.newTabSpec("single").setIndicator(tabSelectorSingle).setContent(R.id.contact_single));
 		tabHost.addTab(tabHost.newTabSpec("group").setIndicator(tabSelectorGroup).setContent(R.id.contact_group));
 		tabHost.addTab(tabHost.newTabSpec("setings").setIndicator(tabSelectorSettings).setContent(R.id.contact_settings));
-        return view;
+        tabHost.setCurrentTab(2);
+		return view;
     }
 
 }
