@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -18,6 +19,8 @@
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/TitleBarBg"
+        		android:padding="10dp" 
                 android:divider="@null" >
             </TabWidget>
 
@@ -28,19 +31,19 @@
  
                 <fragment
                     android:id="@+id/contact_single"
-                    android:name="cc.ccme.love.fragment.ContactSingleFragment"
+                    android:name="cc.ccme.love.contact.ContactSingleFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
                 <fragment
                     android:id="@+id/contact_group"
-                    android:name="cc.ccme.love.fragment.ContactGroupFragment"
+                    android:name="cc.ccme.love.contact.ContactGroupFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
                 <fragment
                     android:id="@+id/contact_settings"
-                    android:name="cc.ccme.love.fragment.ContactSettingsFragment"
+                    android:name="cc.ccme.love.contact.ContactSettingsFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 

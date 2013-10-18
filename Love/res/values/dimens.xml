@@ -12,10 +12,7 @@
     
     
     
-    <!--  
-    <dimen name=""></dimen>
-    Values for left dashboard
-    -->
+    <!--      Values for left dashboard    -->
     <dimen name="left_linear_padding_top">40dp</dimen>
     <dimen name="left_linear_padding_left">35dp</dimen>
     <dimen name="left_linear_padding_bottom">40dp</dimen>
@@ -24,9 +21,7 @@
     <dimen name="button_size">40dp</dimen>
     <dimen name="button_margin">5dp</dimen>
     
-    <!-- 
-    Values for the broadcast
-     -->
+    <!--     Values for the broadcast     -->
     <dimen name="item_space">20dp</dimen>
     <dimen name="btn_size">30dp</dimen>
     <dimen name="item_padding">12dp</dimen>
@@ -34,5 +29,21 @@
     <dimen name="item_linear_padding">18dp</dimen>
     <dimen name="item_btn_size">25dp</dimen>
     <dimen name="item_text_width">30dp</dimen>
-
+    
+    <!-- Values for the person -->
+    <dimen name="person_padding_top">60dp</dimen>
+    <dimen name="person_padding_left">40dp</dimen>
+    <dimen name="person_padding_bottom">40dp</dimen>
+    <dimen name="person_btn_share_size">30dp</dimen>
+	<dimen name="person_linear_padding">50dp</dimen>
+	<dimen name="person_button_margin">10dp</dimen>
+	<dimen name="person_linear_botom_padding">20dp</dimen>
+	
+	<!-- Values for the person edit -->
+	<dimen name="person_edit_linear_padding">20dp</dimen>
+	<dimen name="person_edit_avatar_size">120dp</dimen>
+	<dimen name="person_edit_edit2top">50dp</dimen>
+	<dimen name="person_edit_edit_space">20dp</dimen>
+	<dimen name="person_edit_age_width">100dp</dimen>
+	<dimen name="person_edit_text_height">35dp</dimen>
 </resources>

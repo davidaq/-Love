@@ -141,6 +141,11 @@
                 style="@style/MenuText"
                 android:text="@string/broadcast"
                 />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SplitLine"
+                android:contentDescription="@string/app_name"/>
             <TextView
                 android:id="@+id/person"
                 android:layout_width="fill_parent"
@@ -149,6 +154,11 @@
                 style="@style/MenuText"
                 android:text="@string/person"
                 />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SplitLine"
+                android:contentDescription="@string/app_name"/>
             <TextView
                 android:id="@+id/event"
                 android:layout_width="fill_parent"
@@ -157,6 +167,11 @@
                 style="@style/MenuText"
                 android:text="@string/event"
                 />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SplitLine"
+                android:contentDescription="@string/app_name"/>
             <TextView
                 android:id="@+id/album"
                 android:layout_width="fill_parent"
@@ -165,6 +180,11 @@
                 style="@style/MenuText"
                 android:text="@string/album"
                 />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SplitLine"
+                android:contentDescription="@string/app_name"/>
             <TextView
                 android:id="@+id/video"
                 android:layout_width="fill_parent"
@@ -173,6 +193,11 @@
                 style="@style/MenuText"
                 android:text="@string/video"
                 />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SplitLine"
+                android:contentDescription="@string/app_name"/>
             <TextView
                 android:id="@+id/congrate"
                 android:layout_width="fill_parent"
@@ -181,6 +206,11 @@
                 style="@style/MenuText"
                 android:text="@string/congrate"
                 />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SplitLine"
+                android:contentDescription="@string/app_name"/>
             <TextView
                 android:id="@+id/settings"
                 android:layout_width="fill_parent"
@@ -189,6 +219,11 @@
                 style="@style/MenuText"
                 android:text="@string/settings"
                 />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SplitLine"
+                android:contentDescription="@string/app_name"/>
 		</LinearLayout>
     </ScrollView>
 </RelativeLayout>

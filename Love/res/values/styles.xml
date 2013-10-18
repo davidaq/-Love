@@ -107,12 +107,18 @@
     
     <style name="MenuText">
         <item name="android:textColor">@color/TextBaseColor</item>
+        <item name="android:background">@drawable/bg_left_menu_selector</item>
+        <item name="android:clickable">true</item>
         <item name="android:textSize">18sp</item>
         <item name="android:singleLine">true</item>
-        <item name="android:padding">10dp</item>
+        <item name="android:padding">15dp</item>
         <item name="android:drawablePadding">10dp</item>
         <item name="android:gravity">right|center_vertical</item>
-        <item name="android:drawableBottom">@drawable/list_divider</item>
+    </style>
+    
+    <style name="SplitLine">
+        <item name="android:src">@drawable/list_divider</item>
+        <item name="android:scaleType">fitXY</item>
     </style>
     
     <!-- Values for broadcast -->
@@ -135,5 +141,26 @@
         <item name="android:gravity">left</item>
     </style>
     
+    <!-- Values for person -->
+    <style name="AttentionTitlePerson">
+        <item name="android:textColor">@color/TextBaseColor</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:singleLine">true</item>
+    </style>
     
+    <style name="PersonButton">
+        <item name="android:background">@drawable/btn_common_selector</item>
+        <item name="android:textColor">@drawable/color_button_selector</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    
+    <!-- Values for person edit -->
+    <style name="PersonEditText">
+        <item name="android:background">@drawable/bg_edittext</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/White</item>
+        </style>
 </resources>
