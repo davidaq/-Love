@@ -10,7 +10,7 @@ import android.widget.TextView;
 import cc.ccme.love.BaseFragment;
 import cc.ccme.love.R;
 
-public class EventBaseFragment extends BaseFragment{
+public class BaseEventFragment extends BaseFragment{
 	
 	private ListView listView;
 	private EventAdapter adapter;

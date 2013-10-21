@@ -1,6 +1,6 @@
 package cc.ccme.love.event;
 
 
-public class EventInvitedFragment extends EventBaseFragment{
+public class EventInvitedFragment extends BaseEventFragment{
 	
 }
