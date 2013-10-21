@@ -15,6 +15,10 @@
     <string name="testsound">我爱你中国</string>
     <string name="testdate">2013.12.12 12:00:00</string>
     <string name="testcount">12</string>
+    <string name="testdate2">2013.12.11</string>
+    <string name="testlocation">北京</string>
+    <string name="testtitle">我的事件我的事件我的事件我的事件我的事件我的事件我的事件</string>
+
 
     <!-- Values for title -->
     <string name="title_broadcast">广播流</string>
@@ -29,7 +33,7 @@
     <!--
     Values for left menu 
     
-    <string name=""></string>
+    <string name=""></string>
     -->
     <string name="attention">关注</string>
     <string name="fans">粉丝</string>
@@ -46,5 +50,13 @@
     <string name="person_album">我的相册</string>
     <string name="person_event">我的事件</string>
     <string name="person_edit_title">个人设置</string>
+    
+    <!-- Values for the event -->
+    <string name="event_title">事件展示列表</string>
+    <string name="event_organized">组织事件</string>
+    <string name="event_invited">参加事件</string>
+    <string name="event_privacy_private">(私密)</string>
+    <string name="event_privacy_public">(公开)</string>
+    
 
 </resources>

@@ -51,7 +51,7 @@
                     android:layout_height="wrap_content"
                     style="@style/Age"
                     android:text="@string/testage"
-                    android:drawableRight="@drawable/mm"
+                    android:drawableRight="@drawable/ic_sex_male"
                     />
             </LinearLayout>
         </LinearLayout>

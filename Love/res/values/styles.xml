@@ -163,4 +163,53 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/White</item>
         </style>
+        
+    <!-- Values for the event -->
+    
+    <style name="EventTabText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/color_tab_event_selector</item>
+    </style>
+    
+    <style name="EventListItemTitleText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    <style name="EventListItemPrivacyText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    <style name="EventListItemNameText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:drawableTop">@drawable/avatar_list_item</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    <style name="EventListItemDateText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:drawableLeft">@drawable/ic_event_date</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="EventListItemLocationText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:drawableLeft">@drawable/ic_event_location</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
 </resources>

@@ -79,17 +79,25 @@
             android:layout_marginBottom="@dimen/person_edit_edit_space"
             android:text="@string/testsig" />
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:layout_height="wrap_content" >
             <EditText
                 android:id="@+id/edit_age"
                 style="@style/PersonEditText"
                 android:layout_width="@dimen/person_edit_age_width"
                 android:layout_height="@dimen/person_edit_text_height"
                 android:text="@string/testage" />
-        </LinearLayout>
+            <ToggleButton
+                android:id="@+id/btn_sex"
+                android:layout_width="@dimen/person_edit_sex_size"
+                android:layout_height="@dimen/person_edit_sex_size"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/toggle_sex_selector"
+                android:textOn=""
+                android:textOff=""/>
+        </RelativeLayout>
     </LinearLayout>
     </FrameLayout>
 

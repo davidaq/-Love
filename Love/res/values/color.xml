@@ -6,4 +6,5 @@
     <color name="TextBaseColor">#00DAD3</color>
     <color name="BackBaseColor">#F5F5F5</color>
     <color name="BroadcastBg">#dddddd</color>
+    <color name="Gray">#777777</color>
 </resources>
