@@ -62,7 +62,7 @@
  
                 <fragment
                     android:id="@+id/event_organized"
-                    android:name="cc.ccme.love.event.EventBaseFragment"
+                    android:name="cc.ccme.love.event.BaseEventFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
