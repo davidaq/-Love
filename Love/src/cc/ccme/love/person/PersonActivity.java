@@ -2,7 +2,6 @@ package cc.ccme.love.person;
 
 import cc.ccme.love.BaseActivity;
 import cc.ccme.love.R;
-import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -20,14 +19,13 @@ public class PersonActivity extends BaseActivity implements OnClickListener {
 	@SuppressWarnings("unused")
 	private TextView userName,signature,age,attentionCount,fansCount;
 	private Button btnAlbum,btnEvent;
+	
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_person);
-		initView();
+	protected void setContent() {
+		setContentView(R.layout.activity_person);		
 	}
 	
-	private void initView()
+	protected void initView()
 	{
 		btnBack = (ImageButton) findViewById(R.id.btn_back);
 		btnSettings = (ImageButton) findViewById(R.id.btn_settings);
@@ -46,7 +44,13 @@ public class PersonActivity extends BaseActivity implements OnClickListener {
     	btnAlbum = (Button) findViewById(R.id.btn_album);
     	btnEvent = (Button) findViewById(R.id.btn_event);
     	
-    	btnBack.setOnClickListener(this);
+    	
+	}
+
+
+	@Override
+	protected void initData() {
+		btnBack.setOnClickListener(this);
     	btnSettings.setOnClickListener(this);
     	btnShareSina.setOnClickListener(this);
     	btnShareMm.setOnClickListener(this);
@@ -76,5 +80,7 @@ public class PersonActivity extends BaseActivity implements OnClickListener {
 		}
 		
 	}
+
+
 
 }

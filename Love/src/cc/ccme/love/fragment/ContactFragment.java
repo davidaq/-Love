@@ -27,7 +27,6 @@ public class ContactFragment extends BaseFragment {
 		tabHost.addTab(tabHost.newTabSpec("single").setIndicator(tabSelectorSingle).setContent(R.id.contact_single));
 		tabHost.addTab(tabHost.newTabSpec("group").setIndicator(tabSelectorGroup).setContent(R.id.contact_group));
 		tabHost.addTab(tabHost.newTabSpec("setings").setIndicator(tabSelectorSettings).setContent(R.id.contact_settings));
-        tabHost.setCurrentTab(2);
 		return view;
     }
 
