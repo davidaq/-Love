@@ -46,6 +46,7 @@ public class EventActivity extends BaseActivity implements OnClickListener {
 			finish();
 			break;
 		case R.id.btn_add:
+			startActivity(this, EventCreateActivity.class);
 			break;
 		
 		}

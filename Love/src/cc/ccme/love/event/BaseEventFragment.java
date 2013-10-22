@@ -17,7 +17,7 @@ public class BaseEventFragment extends BaseFragment{
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_event_organized, null);
+		View view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_event_base, null);
 		listView = (ListView) view.findViewById(R.id.listview);
 		adapter = new EventAdapter();
 		listView.setAdapter(adapter);
