@@ -8,7 +8,7 @@
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/TitleBarBg"
+        android:background="@drawable/bg_title_bar"
         android:padding="10dp" >
 
         <ImageButton
@@ -37,9 +37,6 @@
     <TabHost
         android:id="@android:id/tabhost"
         android:layout_below="@id/title_bar"
-        android:layout_marginTop="@dimen/event_tabhost_margin_top"
-        android:layout_marginLeft="@dimen/event_tabhost_margin_left"
-        android:layout_marginRight="@dimen/event_tabhost_margin_right"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
@@ -52,6 +49,11 @@
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingTop="@dimen/event_tabhost_padding_top"
+                android:paddingLeft="@dimen/event_tabhost_padding_left"
+        		android:paddingRight="@dimen/event_tabhost_padding_right"
+        		android:paddingBottom="@dimen/event_tabhost_padding_bottom"
+        		android:background="@drawable/bg_event_tabwidget"
                 android:divider="@null" >
             </TabWidget>
 

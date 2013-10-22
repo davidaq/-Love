@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:scrollbars="@null"
         android:fastScrollEnabled="false"
-        android:listSelector="@drawable/bg_list_event_selector"
-        android:divider="@drawable/list_divider"/>
+        android:listSelector="#00000000"
+        android:divider="@null"/>
 
 </LinearLayout>

@@ -150,7 +150,7 @@
     
     <style name="PersonButton">
         <item name="android:background">@drawable/btn_common_selector</item>
-        <item name="android:textColor">@drawable/color_button_selector</item>
+        <item name="android:textColor">@drawable/color_common_text_selector</item>
         <item name="android:textSize">20sp</item>
     </style>
     
@@ -175,21 +175,21 @@
     <style name="EventListItemTitleText">
         <item name="android:textSize">20sp</item>
         <item name="android:gravity">left</item>
-        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textColor">@color/White</item>
         <item name="android:singleLine">true</item>
     </style>
     
     <style name="EventListItemPrivacyText">
         <item name="android:textSize">12sp</item>
         <item name="android:gravity">left</item>
-        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textColor">@color/White</item>
         <item name="android:singleLine">true</item>
     </style>
     
     <style name="EventListItemNameText">
         <item name="android:textSize">16sp</item>
         <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textColor">@color/White</item>
         <item name="android:drawableTop">@drawable/avatar_list_item</item>
         <item name="android:paddingLeft">5dp</item>
         <item name="android:drawablePadding">10dp</item>
@@ -197,19 +197,70 @@
     </style>
     
     <style name="EventListItemDateText">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:gravity">left</item>
-        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textColor">@color/White</item>
         <item name="android:drawableLeft">@drawable/ic_event_date</item>
         <item name="android:drawablePadding">10dp</item>
         <item name="android:singleLine">true</item>
     </style>
     <style name="EventListItemLocationText">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:gravity">left</item>
-        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textColor">@color/White</item>
         <item name="android:drawableLeft">@drawable/ic_event_location</item>
         <item name="android:drawablePadding">10dp</item>
         <item name="android:singleLine">true</item>
+    </style>
+    
+    <!-- Values for create event -->
+    <style name="EventCreateEditSingle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/Black</item>
+		<item name="android:background">@drawable/bg_common_edit</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <style name="EventCreateEditArea">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">left|top</item>
+        <item name="android:textColor">@color/Black</item>
+		<item name="android:background">@drawable/bg_common_edit</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:minLines">4</item>
+        <item name="android:maxLines">7</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <style name="EventCreateDate">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/color_common_text_selector</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawableLeft">@drawable/ic_date_selector</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+    <style name="EventCreateTime">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/color_common_text_selector</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawableLeft">@drawable/ic_time_selector</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+    <style name="EventCreateAddAvatar">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@drawable/color_common_text_selector</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="EventCreateRadio">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColor">@color/TextBaseColor</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawableRight">@drawable/radio_selector</item>
+        <item name="android:paddingLeft">30dp</item>
     </style>
 </resources>

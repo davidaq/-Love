@@ -50,13 +50,29 @@
 	<dimen name="person_edit_sex_size">30dp</dimen>
 	
 	<!-- Values for the event -->
-	<dimen name="event_tab_height">45dp</dimen>
-	<dimen name="event_tabhost_margin_top">30dp</dimen>
-	<dimen name="event_tabhost_margin_left">15dp</dimen>
-	<dimen name="event_tabhost_margin_right">15dp</dimen>
+	<dimen name="event_tab_height">55dp</dimen>
+	<dimen name="event_tabhost_padding_top">20dp</dimen>
+	<dimen name="event_tabhost_padding_left">12dp</dimen>
+	<dimen name="event_tabhost_padding_right">12dp</dimen>
+	<dimen name="event_tabhost_padding_bottom">12dp</dimen>
 	<dimen name="event_list_item_padding">10dp</dimen>
-	<dimen name="event_list_item_height">100dp</dimen>
+	<dimen name="event_list_item_height">110dp</dimen>
 	<dimen name="event_list_item_avatar_size">40dp</dimen>
 	<dimen name="event_list_item_name_width">60dp</dimen>
 	<dimen name="event_list_item_space">5dp</dimen>
+	<dimen name="event_list_item_margin">2dp</dimen>
+	<dimen name="event_list_margin_top">20dp</dimen>
+	<dimen name="event_list_margin_left">10dp</dimen>
+	<dimen name="event_list_margin_right">10dp</dimen>
+	
+	<!-- Values for create event -->
+	<dimen name="event_create_linear_padding">10dp</dimen>
+	<dimen name="event_create_item_margin">10dp</dimen>
+	<dimen name="event_create_edit_height">40dp</dimen>
+	<dimen name="event_create_avatar_size">50dp</dimen>
+	<dimen name="event_create_avatar_margin">10dp</dimen>
+	<dimen name="event_create_radio_height">50dp</dimen>
+	<dimen name="event_create_cover_height">200dp</dimen>
+	<dimen name="event_create_add_size">30dp</dimen>
+	<dimen name="event_create_radio_margin">20dp</dimen>
 </resources>

@@ -8,7 +8,7 @@
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/TitleBarBg"
+        android:background="@drawable/bg_title_bar"
         android:padding="10dp" >
 
         <ImageButton
