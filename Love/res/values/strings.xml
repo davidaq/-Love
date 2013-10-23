@@ -18,7 +18,7 @@
     <string name="testdate2">2013.12.11</string>
     <string name="testlocation">北京</string>
     <string name="testtitle">我的事件</string>
-
+    <string name="testdetail">今天是安秦和王正兴大喜的日子，大家祝愿他们白头偕老，早生贵子！撒花~~~~~</string>
 
     <!-- Values for title -->
     <string name="title_broadcast">广播流</string>
@@ -30,11 +30,7 @@
     <string name="xlistview_header_last_time">上次更新时间：</string>
     <string name="xlistview_footer_hint_normal">查看更多</string>
     <string name="xlistview_footer_hint_ready">松开载入更多</string>
-    <!--
-    Values for left menu 
-    
-    <string name=""></string>
-    -->
+    <!--    Values for left menu     -->
     <string name="attention">关注</string>
     <string name="fans">粉丝</string>
     <string name="broadcast">广播</string>
@@ -50,14 +46,14 @@
     <string name="person_album">我的相册</string>
     <string name="person_event">我的事件</string>
     <string name="person_edit_title">个人设置</string>
-    
+
     <!-- Values for the event -->
     <string name="event_title">事件展示列表</string>
     <string name="event_organized">组织事件</string>
     <string name="event_invited">参加事件</string>
     <string name="event_privacy_private">(私密)</string>
     <string name="event_privacy_public">(公开)</string>
-    
+
     <!-- Values for create event -->
     <string name="event_create_title">编辑事件</string>
     <string name="event_create_title_hint">标题</string>
@@ -73,5 +69,9 @@
     <string name="event_create_radio_private">私密</string>
     <string name="event_create_add_cover">添加封面</string>
     
+    <!-- Values for event detail -->
+    <string name="event_detail_title">事件详情</string> 
+    <string name="event_detail_joiner">参加人数(0)</string>
+    <string name="event_detail_activity">相关活动</string>
 
 </resources>

@@ -75,4 +75,26 @@
 	<dimen name="event_create_cover_height">200dp</dimen>
 	<dimen name="event_create_add_size">30dp</dimen>
 	<dimen name="event_create_radio_margin">20dp</dimen>
+	
+	<!-- Values for event detail -->
+	<dimen name="event_detail_cover_height">200dp</dimen>
+	<dimen name="event_detail_linear_padding">20dp</dimen>
+	<dimen name="event_detail_avatar_first_size">50dp</dimen>
+	<dimen name="event_detail_avatar_second_size">40dp</dimen>
+	<dimen name="event_detail_name_width">50dp</dimen>
+	<dimen name="event_detail_avatar_margin">10dp</dimen>
+	<dimen name="event_detail_detail_padding">10dp</dimen>
+	<dimen name="event_detail_des_margin">10dp</dimen>
+	<dimen name="event_detail_album_margin">2dp</dimen>
+	<dimen name="event_detail_album_size">80dp</dimen>
+	<dimen name="event_detail_album_padding">1dp</dimen>
+	<dimen name="event_detail_upload_width">40dp</dimen>
+	<dimen name="event_detail_upload_margin">2dp</dimen>
+	<dimen name="event_detail_activity_bar_height">40dp</dimen>
+	<dimen name="event_detail_activity_add_size">30dp</dimen>
+	<dimen name="event_detail_activity_add_margin">5dp</dimen>
+	<dimen name="event_detail_activity_text_margin_left">20dp</dimen>
+	<dimen name="event_detail_dialog_button_size">50dp</dimen>
+	<dimen name="event_detail_dialog_margin">20dp</dimen>
+	
 </resources>
