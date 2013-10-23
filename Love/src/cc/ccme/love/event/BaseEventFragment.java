@@ -4,13 +4,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import cc.ccme.love.BaseFragment;
 import cc.ccme.love.R;
 
-public class BaseEventFragment extends BaseFragment{
+public class BaseEventFragment extends BaseFragment implements OnItemClickListener{
 	
 	private ListView listView;
 	private EventAdapter adapter;
@@ -21,6 +23,7 @@ public class BaseEventFragment extends BaseFragment{
 		listView = (ListView) view.findViewById(R.id.listview);
 		adapter = new EventAdapter();
 		listView.setAdapter(adapter);
+		listView.setOnItemClickListener(this);
         return view;
 	}
 
@@ -68,5 +71,10 @@ public class BaseEventFragment extends BaseFragment{
 	class ViewHolder 
 	{
 		public TextView title,privacy,date,location,hostFirst,hostSecond;
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View view, int position, long arg3) {
+		startActivity(EventDetailActivity.class);		
 	}
 }

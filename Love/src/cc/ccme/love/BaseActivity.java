@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.widget.Toast;
 
 public abstract class BaseActivity extends FragmentActivity{
 	
@@ -25,6 +26,11 @@ public abstract class BaseActivity extends FragmentActivity{
 	{
 		Intent intent = new Intent(context,target);
 		startActivity(intent);
+	}
+	
+	protected void showToast(String msg)
+	{
+		Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
 	}
 	
 	
