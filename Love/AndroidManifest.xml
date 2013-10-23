@@ -28,11 +28,13 @@
         </activity>
         <activity android:name="cc.ccme.love.person.PersonEditActivity" >
         </activity>
-        <activity
-            android:name="cc.ccme.love.event.EventActivity" >
+        <activity android:name="cc.ccme.love.event.EventActivity" >
+        </activity>
+        <activity android:name="cc.ccme.love.event.EventCreateActivity" >
         </activity>
         <activity
-            android:name="cc.ccme.love.event.EventCreateActivity" >
+            android:name="cc.ccme.love.event.EventDetailActivity"
+             >
         </activity>
     </application>
 
