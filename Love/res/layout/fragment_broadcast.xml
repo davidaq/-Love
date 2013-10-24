@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/BroadcastBg">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_title_bar"
+        android:padding="10dp" 
+        >
+    <ImageButton
+        android:id="@+id/btn_left_menu"
+        android:layout_width="@dimen/btn_size"
+        android:layout_height="@dimen/btn_size"
+        android:background="@drawable/ic_btn_left_menu"
+        android:contentDescription="@string/app_name"
+        />
+    <ImageButton
+        android:id="@+id/btn_contact"
+        android:layout_width="@dimen/btn_size"
+        android:layout_height="@dimen/btn_size" 
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_btn_contact"
+        android:contentDescription="@string/app_name"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="@style/TitleText" 
+        android:text="@string/title_broadcast"
+        />
+   </RelativeLayout>
+	<cc.ccme.love.widget.XListView
+	    android:id="@+id/listview_boradcast"
+	    android:layout_below="@id/title_bar"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:divider="#00000000"/>
+</RelativeLayout>

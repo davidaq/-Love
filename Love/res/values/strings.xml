@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">\@Love</string>
+
+    <!-- test value -->
+
+    <string name="testname">安秦</string>
+    <string name="testsig">我是一只大傻逼呀，咿呀伊尔哟~~~</string>
+    <string name="testage">22岁</string>
+    <string name="testnum">12</string>
+    <string name="testvideo">魅力中国</string>
+    <string name="testsound">我爱你中国</string>
+    <string name="testdate">2013.12.12 12:00:00</string>
+    <string name="testcount">12</string>
+    <string name="testdate2">2013.12.11</string>
+    <string name="testlocation">北京</string>
+    <string name="testtitle">我的事件</string>
+    <string name="testdetail">今天是安秦和王正昕大喜的日子，大家祝他们白头偕老，早生贵子！撒花~~~~~</string>
+    <string name="testalbumname">婚礼相册集</string>
+    <string name="testalbumsubname">安秦和王正昕的婚礼</string>
+    <string name="testalbumnum">相册(3)</string>
+
+    <!-- Values for title -->
+    <string name="title_broadcast">广播流</string>
+
+    <!-- Values for xlistview -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <!-- Values for left menu -->
+    <string name="attention">关注</string>
+    <string name="fans">粉丝</string>
+    <string name="broadcast">广播</string>
+    <string name="person">个人主页</string>
+    <string name="event">事件</string>
+    <string name="album">相册</string>
+    <string name="video">创建视频</string>
+    <string name="congrate">祝福墙</string>
+    <string name="settings">系统设置</string>
+
+    <!-- Values for person -->
+    <string name="person_album">我的相册</string>
+    <string name="person_event">我的事件</string>
+    <string name="person_edit_title">个人设置</string>
+
+    <!-- Values for the event -->
+    <string name="event_title">事件展示列表</string>
+    <string name="event_organized">组织事件</string>
+    <string name="event_invited">参加事件</string>
+    <string name="event_privacy_private">(私密)</string>
+    <string name="event_privacy_public">(公开)</string>
+
+    <!-- Values for create event -->
+    <string name="event_create_title">编辑事件</string>
+    <string name="event_create_title_hint">标题</string>
+    <string name="event_create_des_hint">事件描述</string>
+    <string name="event_create_location_hint">地点</string>
+    <string name="event_create_date_start">添加开始日期</string>
+    <string name="event_create_date_end">添加结束日期</string>
+    <string name="event_create_time_start">开始时间</string>
+    <string name="event_create_time_end">结束时间</string>
+    <string name="event_create_add_partner">添加组织者</string>
+    <string name="event_create_radio_public">公开</string>
+    <string name="event_create_radio_read_only">只读</string>
+    <string name="event_create_radio_private">私密</string>
+    <string name="event_create_add_cover">添加封面</string>
+
+    <!-- Values for event detail -->
+    <string name="event_detail_title">事件详情</string>
+    <string name="event_detail_joiner">参加人数(0)</string>
+    <string name="event_detail_activity">相关活动</string>
+    <string name="event_detail_guest_title">参加的人(0)</string>
+    <string name="event_detail_guest_join">参加</string>
+    
+    <!-- Values for album -->
+	<string name="album_title">相册</string>
+	<string name="album_tag_event_created">(创建的事件)</string>
+	<string name="album_tag_event_invited">(参加的事件)</string> 
+	<string name="album_tag_activity_created">(创建的活动)</string>
+	<string name="album_tag_activity_created">(参加的活动)</string>
+</resources>

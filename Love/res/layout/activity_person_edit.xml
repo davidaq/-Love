@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PersonEditActivity" >
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_title_bar"
+        android:padding="10dp" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/btn_size"
+            android:layout_height="@dimen/btn_size"
+            android:background="@drawable/btn_back_selector"
+            android:contentDescription="@string/app_name" />
+
+        <ImageButton
+            android:id="@+id/btn_ok"
+            android:layout_width="@dimen/btn_size"
+            android:layout_height="@dimen/btn_size"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_ok_selector"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/title_text"
+            style="@style/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/person_edit_title" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_below="@id/title_bar"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_bg"
+            android:contentDescription="@string/app_name"/>
+    <LinearLayout
+        android:id="@+id/linear"        
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/person_edit_linear_padding" 
+        >
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/person_edit_avatar_size"
+            android:layout_height="@dimen/person_edit_avatar_size"
+            android:background="@drawable/avatar_default"
+            android:contentDescription="@string/app_name" />
+
+        <EditText
+            android:id="@+id/edit_username"
+            style="@style/PersonEditText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/person_edit_text_height"
+            android:layout_marginBottom="@dimen/person_edit_edit_space"
+            android:layout_marginTop="@dimen/person_edit_edit2top"
+            android:text="@string/testname" />
+
+        <EditText
+            android:id="@+id/edit_signature"
+            style="@style/PersonEditText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/person_edit_text_height"
+            android:layout_marginBottom="@dimen/person_edit_edit_space"
+            android:text="@string/testsig" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <EditText
+                android:id="@+id/edit_age"
+                style="@style/PersonEditText"
+                android:layout_width="@dimen/person_edit_age_width"
+                android:layout_height="@dimen/person_edit_text_height"
+                android:text="@string/testage" />
+            <ToggleButton
+                android:id="@+id/btn_sex"
+                android:layout_width="@dimen/person_edit_sex_size"
+                android:layout_height="@dimen/person_edit_sex_size"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/toggle_sex_selector"
+                android:textOn=""
+                android:textOff=""/>
+        </RelativeLayout>
+    </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

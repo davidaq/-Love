@@ -1,0 +1,105 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/Translucent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".EventDialogActivity" >
+
+    <LinearLayout
+        android:id="@+id/linear01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal"
+             >
+
+            <ImageButton
+                android:id="@+id/message"
+                android:layout_width="@dimen/dialog_button_size"
+                android:layout_height="@dimen/dialog_button_size"
+                android:layout_margin="@dimen/dilaog_button_margin"
+                android:background="@drawable/btn_dialog_message_selector"
+                android:contentDescription="@string/app_name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/invitation"
+                android:layout_width="@dimen/dialog_button_size"
+                android:layout_height="@dimen/dialog_button_size"
+                android:layout_margin="@dimen/dilaog_button_margin"
+                android:background="@drawable/btn_dialog_invitation_selector"
+                android:contentDescription="@string/app_name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/wish"
+                android:layout_width="@dimen/dialog_button_size"
+                android:layout_height="@dimen/dialog_button_size"
+                android:layout_margin="@dimen/dilaog_button_margin"
+                android:background="@drawable/btn_dialog_wish_selector"
+                android:contentDescription="@string/app_name" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/check"
+                android:layout_width="@dimen/dialog_button_size"
+                android:layout_height="@dimen/dialog_button_size"
+                android:layout_margin="@dimen/dilaog_button_margin"
+                android:background="@drawable/btn_dialog_check_selector"
+                android:contentDescription="@string/app_name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/share"
+                android:layout_width="@dimen/dialog_button_size"
+                android:layout_height="@dimen/dialog_button_size"
+                android:layout_margin="@dimen/dilaog_button_margin"
+                android:background="@drawable/btn_dialog_share_selector"
+                android:contentDescription="@string/app_name" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

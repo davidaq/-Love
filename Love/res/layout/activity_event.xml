@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackBaseColor"
+    tools:context=".EventActivity" >
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_title_bar"
+        android:padding="10dp" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/btn_size"
+            android:layout_height="@dimen/btn_size"
+            android:background="@drawable/btn_back_selector"
+            android:contentDescription="@string/app_name" />
+
+        <ImageButton
+            android:id="@+id/btn_add"
+            android:layout_width="@dimen/btn_size"
+            android:layout_height="@dimen/btn_size"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_add_selector"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/TitleText"
+            android:text="@string/event_title" />
+    </RelativeLayout>
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_below="@id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/event_tabhost_padding_top"
+                android:paddingLeft="@dimen/event_tabhost_padding_left"
+        		android:paddingRight="@dimen/event_tabhost_padding_right"
+        		android:paddingBottom="@dimen/event_tabhost_padding_bottom"
+        		android:background="@drawable/bg_event_tabwidget"
+                android:divider="@null" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+ 
+                <fragment
+                    android:id="@+id/event_organized"
+                    android:name="cc.ccme.love.event.BaseEventFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <fragment
+                    android:id="@+id/event_invited"
+                    android:name="cc.ccme.love.event.EventInvitedFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

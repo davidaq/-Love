@@ -1,0 +1,230 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackBaseColor"
+    android:orientation="vertical"
+    tools:context=".EventDetailActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_title_bar"
+            android:padding="10dp" >
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="@dimen/btn_size"
+                android:layout_height="@dimen/btn_size"
+                android:background="@drawable/btn_back_selector"
+                android:contentDescription="@string/app_name" />
+
+            <ImageButton
+                android:id="@+id/btn_edit"
+                android:layout_width="@dimen/btn_size"
+                android:layout_height="@dimen/btn_size"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_edit_selector"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/title_text"
+                style="@style/TitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/event_detail_title" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="@null" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/img_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/event_detail_cover_height"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_video_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_event_linear"
+                    android:orientation="vertical"
+                    android:padding="@dimen/event_detail_linear_padding" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/avatar_first"
+                            android:layout_width="@dimen/event_detail_avatar_first_size"
+                            android:layout_height="@dimen/event_detail_avatar_first_size"
+                            android:contentDescription="@string/app_name"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/avatar_default" />
+
+                        <TextView
+                            android:id="@+id/name_first"
+                            style="@style/EventDetailName"
+                            android:layout_width="@dimen/event_detail_name_width"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/avatar_first"
+                            android:text="@string/testname" />
+
+                        <ImageView
+                            android:id="@+id/avatar_second"
+                            android:layout_width="@dimen/event_detail_avatar_second_size"
+                            android:layout_height="@dimen/event_detail_avatar_second_size"
+                            android:layout_alignBottom="@id/avatar_first"
+                            android:layout_marginLeft="@dimen/event_detail_avatar_margin"
+                            android:layout_toRightOf="@id/avatar_first"
+                            android:contentDescription="@string/app_name"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/avatar_default" />
+
+                        <LinearLayout
+                            android:id="@+id/detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/avatar_second"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/event_detail_detail_padding" >
+
+                            <TextView
+                                android:id="@+id/event_title"
+                                style="@style/EventDetailTitleText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/testtitle" />
+
+                            <TextView
+                                android:id="@+id/event_date"
+                                style="@style/EventDetailDateText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/event_list_item_space"
+                                android:text="@string/testdate2" />
+
+                            <TextView
+                                android:id="@+id/event_location"
+                                style="@style/EventDetailLocationText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/event_list_item_space"
+                                android:text="@string/testlocation" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/text_guest"
+                            style="@style/EventDetailGuest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/detail"
+                            android:layout_alignParentRight="true"
+                            android:text="@string/event_detail_joiner" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/text_detail"
+                        style="@style/EventDetailDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/event_detail_des_margin"
+                        android:text="@string/testdetail" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/event_detail_album_margin"
+                    android:layout_marginTop="@dimen/event_detail_album_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageButton
+                        android:layout_width="@dimen/event_detail_upload_width"
+                        android:layout_height="@dimen/event_detail_album_size"
+                        android:layout_marginBottom="@dimen/event_detail_upload_margin"
+                        android:layout_marginRight="@dimen/event_detail_upload_margin"
+                        android:layout_marginTop="@dimen/event_detail_upload_margin"
+                        android:background="@drawable/btn_image_upload_selector"
+                        android:contentDescription="@string/app_name" />
+
+                    <cc.ccme.love.widget.HorizontalListView
+                        android:id="@+id/album_list_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/event_detail_album_size"
+                        android:scrollbars="@null" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/list_divider"
+                        android:contentDescription="@string/app_name" />
+                    <ImageView
+                        android:id="@+id/activity_bar"
+                        android:layout_below="@id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/event_detail_activity_bar_height"
+                        android:background="@drawable/bg_title_bar"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        style="@style/EventDetailActivity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/event_detail_activity_text_margin_left"
+                        android:layout_marginTop="@dimen/event_detail_activity_add_margin"
+                        android:text="@string/event_detail_activity" />
+
+                    <ImageButton
+                        android:id="@+id/btn_add"
+                        android:layout_width="@dimen/event_detail_activity_add_size"
+                        android:layout_height="@dimen/event_detail_activity_add_size"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="@dimen/event_detail_activity_add_margin"
+                        android:background="@drawable/btn_add_selector"
+                        android:contentDescription="@string/app_name" />
+
+                    <cc.ccme.love.widget.WTFListView
+                        android:id="@+id/listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/event_list_item_height"
+                        android:layout_below="@id/activity_bar" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+	<ImageButton
+	    android:id="@+id/btn_dialog"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentRight="true"
+	    android:layout_width="@dimen/event_detail_dialog_button_size"
+	    android:layout_height="@dimen/event_detail_dialog_button_size"
+	    android:layout_margin="@dimen/event_detail_dialog_margin"
+	    android:background="@drawable/btn_dialog_selector"
+	    android:contentDescription="@string/app_name"/>
+</RelativeLayout>
