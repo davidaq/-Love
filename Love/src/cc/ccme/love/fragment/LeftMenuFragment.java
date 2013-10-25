@@ -2,7 +2,7 @@ package cc.ccme.love.fragment;
 
 import cc.ccme.love.BaseFragment;
 import cc.ccme.love.R;
-import cc.ccme.love.album.AlbumActivity;
+import cc.ccme.love.album.GalleryActivity;
 import cc.ccme.love.event.EventActivity;
 import cc.ccme.love.person.PersonActivity;
 import android.os.Bundle;
@@ -95,7 +95,7 @@ public class LeftMenuFragment extends BaseFragment implements OnClickListener {
 			startActivity(EventActivity.class);
 			break;
 		case R.id.album:
-			startActivity(AlbumActivity.class);
+			startActivity(GalleryActivity.class);
 			break;
 		case R.id.video:
 			break;

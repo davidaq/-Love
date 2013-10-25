@@ -6,103 +6,134 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 import cc.ccme.love.BaseActivity;
 import cc.ccme.love.R;
 
-public class AlbumActivity extends BaseActivity implements OnClickListener, OnItemClickListener {
+public class AlbumActivity extends BaseActivity implements OnClickListener,
+		OnCheckedChangeListener, OnItemClickListener {
 
-	private ImageButton btnBack;
-	private ListView listView;
+	private GridView gridView;
 	private AlbumAdapter adapter;
+	private ToggleButton btnEdit;
+	private ImageButton btnBack;
+	private boolean isChecked;
+
 	@Override
 	protected void setContent() {
 		setContentView(R.layout.activity_album);
-		
+
 	}
 
 	@Override
 	protected void initView() {
+		gridView = (GridView) findViewById(R.id.gridview);
 		btnBack = (ImageButton) findViewById(R.id.btn_back);
-		listView = (ListView) findViewById(R.id.listview);
-		
+		btnEdit = (ToggleButton) findViewById(R.id.btn_edit);
 	}
 
 	@Override
 	protected void initData() {
+		isChecked = false;
 		btnBack.setOnClickListener(this);
+		btnEdit.setOnCheckedChangeListener(this);
 		adapter = new AlbumAdapter();
-		listView.setAdapter(adapter);
-		listView.setOnItemClickListener(this);
+		gridView.setAdapter(adapter);
+		gridView.setOnItemClickListener(this);
+
 	}
 
-	@Override
-	public void onClick(View v) {
-		switch(v.getId())
-		{
-		case R.id.btn_back:
-			finish();
-			break;
-		}
-		
-	}
-
-	class AlbumAdapter extends BaseAdapter
-	{
+	class AlbumAdapter extends BaseAdapter {
 
 		@Override
 		public int getCount() {
-			
 			return 10;
 		}
 
 		@Override
 		public Object getItem(int arg0) {
-			
 			return null;
 		}
 
 		@Override
 		public long getItemId(int arg0) {
-			
 			return 0;
 		}
 
 		@Override
 		public View getView(int position, View convertView, ViewGroup arg2) {
-			
 			ViewHolder holder;
-			if(convertView==null)
-			{
+			if (convertView == null) {
 				holder = new ViewHolder();
 				convertView = getLayoutInflater().inflate(
-						R.layout.list_item_album, null);
-				holder.cover = (ImageView) convertView.findViewById(R.id.album_cover);
-				holder.title = (TextView) convertView.findViewById(R.id.album_title);
-				holder.name = (TextView) convertView.findViewById(R.id.album_name);
-				holder.date = (TextView) convertView.findViewById(R.id.album_date);
-				holder.count = (TextView) convertView.findViewById(R.id.album_count);
+						R.layout.grid_item_album, null);
+				holder.btnDelete = (ImageButton) convertView
+						.findViewById(R.id.btn_delete);
+				holder.btnEdit = (ImageButton) convertView
+						.findViewById(R.id.btn_edit);
+				holder.btnPrivacy = (ToggleButton) convertView
+						.findViewById(R.id.btn_privacy);
+				holder.cover = (ImageView) convertView
+						.findViewById(R.id.image_cover);
+				holder.text_title = (TextView) convertView
+						.findViewById(R.id.text_title);
+				holder.text_privacy = (TextView) convertView
+						.findViewById(R.id.text_privacy);
 				convertView.setTag(holder);
 			} else {
 				holder = (ViewHolder) convertView.getTag();
 			}
+			if (!isChecked) {
+				holder.btnDelete.setVisibility(View.INVISIBLE);
+				holder.btnPrivacy.setVisibility(View.INVISIBLE);
+				holder.btnEdit.setVisibility(View.INVISIBLE);
+			} else {
+				holder.btnDelete.setVisibility(View.VISIBLE);
+				holder.btnPrivacy.setVisibility(View.VISIBLE);
+				holder.btnEdit.setVisibility(View.VISIBLE);
+			}
 			return convertView;
 		}
-		
+
 	}
 
-	class ViewHolder 
-	{
-		public TextView title,name,date,count;
+	class ViewHolder {
+		public ImageButton btnDelete, btnEdit;
+		public ToggleButton btnPrivacy;
+		public TextView text_title, text_privacy;
 		public ImageView cover;
 	}
 
 	@Override
-	public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-		
+	public void onClick(View view) {
+		switch (view.getId()) {
+		case R.id.btn_back:
+			finish();
+			break;
+		case R.id.btn_edit:
+			break;
+
+		}
+
+	}
+
+	@Override
+	public void onCheckedChanged(CompoundButton arg0, boolean isChecked) {
+		this.isChecked = isChecked;
+		adapter.notifyDataSetChanged();
+
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View view, int position, long arg3) {
+		AlbumCreateDialog dialog = new AlbumCreateDialog(this);
+		dialog.show();
 		
 	}
 
