@@ -87,6 +87,13 @@
     	<item name="android:fastScrollEnabled">false</item>
     	<item name="android:scrollbars">@null</item>
     </style>
+    <style name="BaseDialog" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item> 
+        <item name="android:windowBackground">@color/Translucent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
     <!-- Values for left menu -->
 
     <style name="UserName">
@@ -356,23 +363,83 @@
         <item name="android:singleLine">true</item>
     </style>
     
-    <!-- Values for album -->
-    <style name="AlbumTitle">
+    <!-- Values for gallery -->
+    <style name="GalleryTitle">
         <item name="android:textSize">18sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="GalleryTag">
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="GalleryName">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    <!-- Values for album -->
+    <style name="AlbumName">
+        <item name="android:textSize">16sp</item>
         <item name="android:gravity">left</item>
         <item name="android:textColor">@color/Gray</item>
         <item name="android:singleLine">true</item>
     </style>
     <style name="AlbumTag">
         <item name="android:textSize">14sp</item>
-        <item name="android:gravity">left</item>
+        <item name="android:gravity">right</item>
         <item name="android:textColor">@color/Gray</item>
         <item name="android:singleLine">true</item>
     </style>
-    <style name="AlbumName">
+    <style name="AlbumCount">
+        <item name="android:background">@drawable/bg_list_album_selector</item>
         <item name="android:textSize">16sp</item>
         <item name="android:gravity">left</item>
         <item name="android:textColor">@color/White</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <style name="AlbumPrivacy">
+        <item name="android:textSize">13sp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    <style name="AlbumToggle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/color_toggle_text_selector</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:textOff">@string/album_privacy_public</item>
+        <item name="android:textOn">@string/album_privacy_private</item>
+    </style>
+    <style name="AlbumDialogTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/TextBaseColor</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="AlbumDialogEdit">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:background">@drawable/bg_common_edit</item>        
+    </style>
+    <style name="AlbumDialogButton">
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/color_common_text_selector</item>
         <item name="android:singleLine">true</item>
     </style>
 </resources>

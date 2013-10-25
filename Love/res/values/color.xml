@@ -8,4 +8,5 @@
     <color name="BroadcastBg">#dddddd</color>
     <color name="Gray">#777777</color>
     <color name="Translucent">#0000</color>
+    <color name="TransBlack">#aa000000</color>
 </resources>

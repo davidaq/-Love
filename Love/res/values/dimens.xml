@@ -109,12 +109,27 @@
 	<dimen name="dialog_button_size">70dp</dimen>
 	<dimen name="dilaog_button_margin">5dp</dimen>
 	
-	<!-- Values for album -->
-	<dimen name="album_bar_height">40dp</dimen>
-	<dimen name="album_relative_padding">5dp</dimen>
-	<dimen name="album_name_margin">10dp</dimen>
-	<dimen name="album_item_height">110dp</dimen>
-	<dimen name="album_text_space">5dp</dimen>
-	<dimen name="album_linear_padding">25dp</dimen>
+	<!-- Values for gallery -->
+	<dimen name="gallery_bar_height">40dp</dimen>
+	<dimen name="gallery_relative_padding">5dp</dimen>
+	<dimen name="gallery_name_margin">10dp</dimen>
+	<dimen name="gallery_item_height">110dp</dimen>
+	<dimen name="gallery_text_space">5dp</dimen>
+	<dimen name="gallery_linear_padding">25dp</dimen>
 	
+	<!-- Values for album-->
+	<dimen name="album_item_size">160dp</dimen>
+	<dimen name="album_bar_padding">5dp</dimen>
+	<dimen name="album_title_width">90dp</dimen>
+	<dimen name="album_button_size">20dp</dimen>
+	<dimen name="album_toggle_width">40dp</dimen>
+	<dimen name="album_toggle_height">24dp</dimen>
+	<dimen name="album_btn_margin">10dp</dimen>
+	<dimen name="album_btn_delete_margin">15dp</dimen>
+	<dimen name="album_privacy_padding">3dp</dimen>
+	<dimen name="album_dialog_padding">15dp</dimen>
+	<dimen name="album_dialog_width">300dp</dimen>
+	<dimen name="album_dialog_edit_width">250dp</dimen>
+	<dimen name="album_dialog_edit_margin">10dp</dimen>
+	<dimen name="album_dialog_toggle_margin_right">100dp</dimen>
 </resources>

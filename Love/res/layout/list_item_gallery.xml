@@ -7,32 +7,32 @@
     <RelativeLayout
         android:id="@+id/relative"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/album_bar_height"
+        android:layout_height="@dimen/gallery_bar_height"
         android:background="@drawable/bg_title_bar"
         android:gravity="center_vertical"
-        android:padding="@dimen/album_relative_padding" >
+        android:padding="@dimen/gallery_relative_padding" >
  
         <TextView
             android:id="@+id/album_title"
-            style="@style/AlbumTitle"  
+            style="@style/GalleryTitle"  
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/album_name_margin"
+            android:layout_marginLeft="@dimen/gallery_name_margin"
             android:text="@string/testalbumname" />
 
         <TextView
             android:id="@+id/album_tag"
-            style="@style/AlbumTag"
+            style="@style/GalleryTag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/album_name_margin"
+            android:layout_marginRight="@dimen/gallery_name_margin"
             android:layout_alignBottom="@id/album_title"
             android:text="@string/album_tag_activity_created" />
     </RelativeLayout>
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/album_item_height">
+        android:layout_height="@dimen/gallery_item_height">
         <ImageView
             android:id="@+id/album_cover"
             android:layout_width="match_parent"
@@ -42,33 +42,33 @@
             android:contentDescription="@string/app_name"/>
 	    <LinearLayout
 	        android:layout_width="match_parent"
-	        android:layout_height="@dimen/album_item_height"
+	        android:layout_height="@dimen/gallery_item_height"
 	        android:orientation="vertical"
-	        android:paddingLeft="@dimen/album_linear_padding"
+	        android:paddingLeft="@dimen/gallery_linear_padding"
 	        android:background="@drawable/bg_list_album_selector"
 	        android:gravity="center_vertical">
 	        <TextView
 	            android:id="@+id/album_name"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:layout_margin="@dimen/album_text_space"
-	            style="@style/AlbumName"
+	            android:layout_margin="@dimen/gallery_text_space"
+	            style="@style/GalleryName"
 	            android:text="@string/testalbumsubname"
 	            />
 	        <TextView
 	            android:id="@+id/album_date"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:layout_margin="@dimen/album_text_space"
-	            style="@style/AlbumName"
+	            android:layout_margin="@dimen/gallery_text_space"
+	            style="@style/GalleryName"
 	            android:text="@string/testdate2"
 	            />
 	        <TextView 
 	            android:id="@+id/album_count"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:layout_margin="@dimen/album_text_space"
-	            style="@style/AlbumName"
+	            android:layout_margin="@dimen/gallery_text_space"
+	            style="@style/GalleryName"
 	            android:text="@string/testalbumnum"
 	            />
 	    </LinearLayout>

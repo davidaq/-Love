@@ -1,38 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/BackBaseColor"
-    android:orientation="vertical"
-    tools:context=".AlbumActivity" >
-
+    android:orientation="vertical" >
     <RelativeLayout
-        android:id="@+id/title_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_title_bar"
-        android:padding="10dp" >
-
-        <ImageButton
-            android:id="@+id/btn_back"
-            android:layout_width="@dimen/btn_size"
-            android:layout_height="@dimen/btn_size"
-            android:background="@drawable/btn_back_selector"
-            android:contentDescription="@string/app_name" />
-
-        <TextView
-            android:id="@+id/title_text"
-            style="@style/TitleText"
-            android:layout_width="wrap_content"
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/album_title" />
-    </RelativeLayout>
+            android:background="@drawable/bg_title_bar"
+            android:padding="10dp" >
 
-    <ListView
-        android:id="@+id/listview"
-        style="@style/ListView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="@dimen/btn_size"
+                android:layout_height="@dimen/btn_size"
+                android:background="@drawable/btn_back_selector"
+                android:contentDescription="@string/app_name" />
+
+            <ToggleButton
+                android:id="@+id/btn_edit"
+                android:layout_width="@dimen/btn_size"
+                android:layout_height="@dimen/btn_size"
+                android:layout_alignParentRight="true"
+                android:textOn=""
+                android:textOff=""
+                android:background="@drawable/toggle_edit_selector"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/title_text"
+                style="@style/TitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/testalbumname" />
+        </RelativeLayout>
+        <GridView
+            android:id="@+id/gridview"
+	        android:layout_height="match_parent"
+	        android:layout_width="match_parent"
+	        android:columnWidth="@dimen/album_item_size" 
+	        android:horizontalSpacing="1dp"
+	        android:verticalSpacing="1dp"
+	        android:gravity="center" 
+	        android:numColumns="auto_fit"
+	        android:scrollbars="@null" 
+	        android:stretchMode="columnWidth"
+        />
 
 </LinearLayout>

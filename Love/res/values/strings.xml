@@ -20,6 +20,7 @@
     <string name="testalbumname">婚礼相册集</string>
     <string name="testalbumsubname">安秦和王正昕的婚礼</string>
     <string name="testalbumnum">相册(3)</string>
+    <string name="testalbumcount">(1900)</string>
 
     <!-- Values for title -->
     <string name="title_broadcast">广播流</string>
@@ -82,4 +83,11 @@
 	<string name="album_tag_event_invited">(参加的事件)</string> 
 	<string name="album_tag_activity_created">(创建的活动)</string>
 	<string name="album_tag_activity_created">(参加的活动)</string>
+	<string name="album_tag_event">事件</string>
+	<string name="album_tag_activity">活动</string>
+	<string name="album_privacy_private">隐私</string>
+	<string name="album_privacy_public">公开</string>
+	<string name="album_dialog_create">新建相册</string>
+	<string name="album_dialog_cancel">取消</string>
+	<string name="album_dialog_save">储存</string>
 </resources>
