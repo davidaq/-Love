@@ -39,6 +39,10 @@
             android:theme="@style/DialogTheme" >
         </activity>
         <activity
+            android:name="cc.ccme.love.album.GalleryActivity"
+            >
+        </activity>
+        <activity
             android:name="cc.ccme.love.album.AlbumActivity"
             >
         </activity>
