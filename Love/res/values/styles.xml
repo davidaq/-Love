@@ -94,6 +94,16 @@
         <item name="android:windowIsFloating">true</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
+    <!-- 全屏dialog样式 左右插入 -->
+    <style name="FullDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@color/Translucent</item>
+        <item name="android:gravity">bottom</item>
+    </style>
     <!-- Values for left menu -->
 
     <style name="UserName">
@@ -441,5 +451,43 @@
         <item name="android:gravity">center</item>
         <item name="android:textColor">@drawable/color_common_text_selector</item>
         <item name="android:singleLine">true</item>
+    </style>
+    <style name="AlbumCreateButton">
+        <item name="android:text">@string/album_dialog_create</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/color_common_text_selector</item>
+        <item name="android:background">@drawable/bg_common_text_selector</item>
+    </style>
+    
+    <!-- Values for Album gallery -->
+    <style name="AlbumGalleryName">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/TextBaseColor</item>
+    </style>
+    <style name="AlbumGalleryDate">
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/Gray</item>
+    </style>
+    <style name="AlbumGalleryCount">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/TextBaseColor</item>
+    </style>
+    <style name="AlbumPicDialogSave">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:drawableLeft">@drawable/btn_common_save_selector</item>
+        <item name="android:textColor">@drawable/color_common_text_selector</item>
+    </style>
+    <style name="AlbumPicDialogDelete">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:drawableLeft">@drawable/btn_delete_selector</item>
+        <item name="android:textColor">@drawable/color_common_text_selector</item>
     </style>
 </resources>

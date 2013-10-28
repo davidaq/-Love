@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/relative_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    tools:context=".AlbumContentActivity" >
+
     <RelativeLayout
             android:id="@+id/title_bar"
             android:layout_width="match_parent"
@@ -18,14 +18,12 @@
                 android:background="@drawable/btn_back_selector"
                 android:contentDescription="@string/app_name" />
 
-            <ToggleButton
-                android:id="@+id/btn_edit"
+            <ImageButton
+                android:id="@+id/btn_add"
                 android:layout_width="@dimen/btn_size"
                 android:layout_height="@dimen/btn_size"
                 android:layout_alignParentRight="true"
-                android:textOn=""
-                android:textOff=""
-                android:background="@drawable/toggle_edit_selector"
+                android:background="@drawable/btn_add_selector"
                 android:contentDescription="@string/app_name" />
 
             <TextView
@@ -41,19 +39,13 @@
             android:layout_below="@id/title_bar"
 	        android:layout_height="match_parent"
 	        android:layout_width="match_parent"
-	        android:columnWidth="@dimen/album_item_size" 
-	        android:horizontalSpacing="1dp"
-	        android:verticalSpacing="1dp"
+	        android:columnWidth="@dimen/album_item_content_size" 
+	        android:horizontalSpacing="0dp"
+	        android:verticalSpacing="0dp"
 	        android:gravity="center" 
 	        android:numColumns="auto_fit"
 	        android:scrollbars="@null" 
 	        android:stretchMode="columnWidth"
         />
-<Button
-    android:id="@+id/btn_create"
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/album_create_height"
-    android:layout_alignParentBottom="true"
-    android:visibility="gone"
-    style="@style/AlbumCreateButton"/>   
+
 </RelativeLayout>

@@ -21,6 +21,7 @@
     <string name="testalbumsubname">安秦和王正昕的婚礼</string>
     <string name="testalbumnum">相册(3)</string>
     <string name="testalbumcount">(1900)</string>
+    <string name="testuploaddate">上传于14小时前</string>
 
     <!-- Values for title -->
     <string name="title_broadcast">广播流</string>
@@ -76,18 +77,21 @@
     <string name="event_detail_activity">相关活动</string>
     <string name="event_detail_guest_title">参加的人(0)</string>
     <string name="event_detail_guest_join">参加</string>
-    
+
     <!-- Values for album -->
-	<string name="album_title">相册</string>
-	<string name="album_tag_event_created">(创建的事件)</string>
-	<string name="album_tag_event_invited">(参加的事件)</string> 
-	<string name="album_tag_activity_created">(创建的活动)</string>
-	<string name="album_tag_activity_created">(参加的活动)</string>
-	<string name="album_tag_event">事件</string>
-	<string name="album_tag_activity">活动</string>
-	<string name="album_privacy_private">隐私</string>
-	<string name="album_privacy_public">公开</string>
-	<string name="album_dialog_create">新建相册</string>
-	<string name="album_dialog_cancel">取消</string>
-	<string name="album_dialog_save">储存</string>
+    <string name="album_title">相册</string>
+    <string name="album_tag_event_created">(创建的事件)</string>
+    <string name="album_tag_event_invited">(参加的事件)</string>
+    <string name="album_tag_activity_created">(创建的活动)</string>
+    <string name="album_tag_activity_created">(参加的活动)</string>
+    <string name="album_tag_event">事件</string>
+    <string name="album_tag_activity">活动</string>
+    <string name="album_privacy_private">隐私</string>
+    <string name="album_privacy_public">公开</string>
+    <string name="album_dialog_create">新建相册</string>
+    <string name="album_dialog_cancel">取消</string>
+    <string name="album_dialog_save">储存</string>
+    <string name="album_dialog_pic_save">保存到本地</string>
+    <string name="album_dialog_pic_delete">删除照片</string>
+
 </resources>

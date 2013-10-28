@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_dialog_bottom"
+    android:paddingTop="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+     android:paddingBottom="10dp" > 
+    
+    <LinearLayout
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/btn_common_selector"
+        android:padding="@dimen/album_dialog_pic_padding"
+        android:clickable="true"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/album_dialog_pic_save"
+            style="@style/AlbumPicDialogSave"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btn_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/btn_common_selector"
+        android:padding="@dimen/album_dialog_pic_padding"
+        android:clickable="true"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/album_dialog_pic_delete"
+            style="@style/AlbumPicDialogDelete"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/btn_common_selector"
+        android:padding="@dimen/album_dialog_pic_padding"
+        android:clickable="true"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_common_cancel_selector"
+            android:contentDescription="@string/app_name"
+            />
+    </LinearLayout>
+
+</LinearLayout>

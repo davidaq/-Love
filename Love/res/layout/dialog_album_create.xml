@@ -4,10 +4,12 @@
     android:layout_height="wrap_content"
     android:background="@drawable/bg_dialog"
     android:padding="0dp"
+    android:gravity="center_horizontal"
     android:orientation="vertical" >
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:padding="@dimen/album_dialog_padding"
         >
         <TextView
@@ -21,7 +23,7 @@
             android:id="@+id/edittext"
             android:layout_below="@id/title"
             android:layout_marginTop="@dimen/album_dialog_edit_margin"
-            android:layout_width="@dimen/album_dialog_edit_width" 
+            android:layout_width="match_parent" 
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             style="@style/AlbumDialogEdit"

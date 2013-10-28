@@ -132,4 +132,11 @@
 	<dimen name="album_dialog_edit_width">250dp</dimen>
 	<dimen name="album_dialog_edit_margin">10dp</dimen>
 	<dimen name="album_dialog_toggle_margin_right">100dp</dimen>
+	<dimen name="album_create_height">60dp</dimen>
+	<dimen name="album_item_content_size">80dp</dimen>
+	
+	<!-- Values for album gallery -->
+	<dimen name="album_gallery_avatar_size">40dp</dimen>
+	<dimen name="album_gallery_button_size">20dp</dimen>
+	<dimen name="album_dialog_pic_padding">15dp</dimen>
 </resources>
