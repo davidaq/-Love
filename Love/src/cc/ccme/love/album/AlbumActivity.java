@@ -1,11 +1,13 @@
 package cc.ccme.love.album;
 
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.GridView;
@@ -24,6 +26,7 @@ public class AlbumActivity extends BaseActivity implements OnClickListener,
 	private ToggleButton btnEdit;
 	private ImageButton btnBack;
 	private boolean isChecked;
+	private Button btnCreate;
 
 	@Override
 	protected void setContent() {
@@ -36,12 +39,14 @@ public class AlbumActivity extends BaseActivity implements OnClickListener,
 		gridView = (GridView) findViewById(R.id.gridview);
 		btnBack = (ImageButton) findViewById(R.id.btn_back);
 		btnEdit = (ToggleButton) findViewById(R.id.btn_edit);
+		btnCreate = (Button) findViewById(R.id.btn_create);
 	}
 
 	@Override
 	protected void initData() {
 		isChecked = false;
 		btnBack.setOnClickListener(this);
+		btnCreate.setOnClickListener(this);
 		btnEdit.setOnCheckedChangeListener(this);
 		adapter = new AlbumAdapter();
 		gridView.setAdapter(adapter);
@@ -118,7 +123,11 @@ public class AlbumActivity extends BaseActivity implements OnClickListener,
 			break;
 		case R.id.btn_edit:
 			break;
-
+		case R.id.btn_create:
+			AlbumCreateDialog dialog = new AlbumCreateDialog(this);
+			dialog.show();
+			btnCreate.setVisibility(View.GONE);
+			break;
 		}
 
 	}
@@ -131,10 +140,28 @@ public class AlbumActivity extends BaseActivity implements OnClickListener,
 	}
 
 	@Override
-	public void onItemClick(AdapterView<?> arg0, View view, int position, long arg3) {
-		AlbumCreateDialog dialog = new AlbumCreateDialog(this);
-		dialog.show();
-		
+	public void onItemClick(AdapterView<?> arg0, View view, int position,
+			long arg3) {
+		startActivity(this, AlbumContentActivity.class);
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+		if (keyCode == KeyEvent.KEYCODE_MENU) {
+			switch (btnCreate.getVisibility()) {
+			case View.VISIBLE:
+				btnCreate.setVisibility(View.GONE);
+				break;
+			case View.GONE:
+				btnCreate.setVisibility(View.VISIBLE);
+				break;
+			}
+
+		} else {
+			super.onKeyDown(keyCode, event);
+		}
+		return true;
 	}
 
 }
