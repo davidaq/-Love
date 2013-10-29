@@ -1,5 +1,6 @@
 package cc.ccme.love.util;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
@@ -28,9 +29,9 @@ public class ImageUtil {
 		return bitmap;
 	}
 
-	public static Drawable bitmapToDrawable(Bitmap bitmap) {
-		@SuppressWarnings("deprecation")
-		Drawable drawable = new BitmapDrawable(bitmap);
+	public static Drawable bitmapToDrawable(Context context,Bitmap bitmap) {
+		
+		Drawable drawable = new BitmapDrawable(context.getResources(),bitmap);
 		return drawable;
 	}
 

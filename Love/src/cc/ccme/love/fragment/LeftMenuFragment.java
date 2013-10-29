@@ -5,6 +5,7 @@ import cc.ccme.love.R;
 import cc.ccme.love.album.GalleryActivity;
 import cc.ccme.love.event.EventActivity;
 import cc.ccme.love.person.PersonActivity;
+import cc.ccme.love.video.VideoActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -98,6 +99,7 @@ public class LeftMenuFragment extends BaseFragment implements OnClickListener {
 			startActivity(GalleryActivity.class);
 			break;
 		case R.id.video:
+			startActivity(VideoActivity.class);
 			break;
 		case R.id.congrate:
 			break;
