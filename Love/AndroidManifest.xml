@@ -7,8 +7,9 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -44,11 +45,13 @@
         </activity>
         <activity android:name="cc.ccme.love.album.AlbumActivity" >
         </activity>
-        <activity
-            android:name="cc.ccme.love.album.AlbumContentActivity" >
+        <activity android:name="cc.ccme.love.album.AlbumContentActivity" >
+        </activity>
+        <activity android:name="cc.ccme.love.album.AlbumGalleryActivity" >
         </activity>
         <activity
-            android:name="cc.ccme.love.album.AlbumGalleryActivity" >
+            android:name="cc.ccme.love.video.VideoActivity"
+             >
         </activity>
     </application>
 
