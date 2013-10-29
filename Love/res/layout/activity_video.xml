@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackBaseColor"
+    tools:context=".VideoActivity" >
+	<RelativeLayout
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_title_bar"
+            android:padding="10dp" >
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="@dimen/btn_size"
+                android:layout_height="@dimen/btn_size"
+                android:background="@drawable/btn_back_selector"
+                android:contentDescription="@string/app_name" />
+
+            <ImageButton
+                android:id="@+id/btn_ok"
+                android:layout_width="@dimen/btn_size"
+                android:layout_height="@dimen/btn_size"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_ok_selector"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/title_text"
+                style="@style/TitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/video_title" />
+        </RelativeLayout>
+        
+	<LinearLayout
+	    android:id="@+id/btn_add_moment"
+	    android:layout_below="@id/title_bar"
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/btn_common_selector"
+        android:padding="@dimen/album_dialog_pic_padding"
+        android:layout_margin="20dp"
+        android:clickable="true">
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/video_button_add"
+            style="@style/VideoMomentAdd"
+            />
+    </LinearLayout>
+        
+	<ListView
+	    android:id="@+id/listview"
+	    android:layout_below="@id/btn_add_moment"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    style="@style/ListView"/>
+	
+</RelativeLayout>

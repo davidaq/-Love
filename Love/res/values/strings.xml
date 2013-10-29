@@ -93,5 +93,10 @@
     <string name="album_dialog_save">储存</string>
     <string name="album_dialog_pic_save">保存到本地</string>
     <string name="album_dialog_pic_delete">删除照片</string>
+    
+    <!-- Values for video -->
+    <string name="video_title">选择照片</string>
+    <string name="video_button_add">添加元素</string>
+    <string name="video_edit_hint">视频标题</string>
 
 </resources>

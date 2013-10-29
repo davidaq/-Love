@@ -139,4 +139,9 @@
 	<dimen name="album_gallery_avatar_size">40dp</dimen>
 	<dimen name="album_gallery_button_size">20dp</dimen>
 	<dimen name="album_dialog_pic_padding">15dp</dimen>
+	
+	<!-- Values for video -->
+	<dimen name="video_item_size">90dp</dimen>
+	<dimen name="video_btn_delete_size">10dp</dimen>
+	<dimen name="video_image_margin">5dp</dimen>
 </resources>

@@ -81,6 +81,7 @@
     	<item name="android:scrollbars">@null</item>
     </style>
     
+    
     <style name="ListViewWithDivider">
     	<item name="android:listSelector">#00000000</item>
     	<item name="android:divider">@drawable/list_divider</item>
@@ -488,6 +489,15 @@
         <item name="android:gravity">center</item>
         <item name="android:drawablePadding">10dp</item>
         <item name="android:drawableLeft">@drawable/btn_delete_selector</item>
+        <item name="android:textColor">@drawable/color_common_text_selector</item>
+    </style>
+    
+    <!-- Values for Video -->
+    <style name="VideoMomentAdd">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:drawableLeft">@drawable/btn_add_selector</item>
         <item name="android:textColor">@drawable/color_common_text_selector</item>
     </style>
 </resources>
