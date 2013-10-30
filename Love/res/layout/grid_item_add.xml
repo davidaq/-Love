@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cc.ccme.love.widget.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+    <ImageButton
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/video_image_margin"
+        android:background="@drawable/btn_video_add_selector"
+        android:contentDescription="@string/app_name"
+        />
+
+</cc.ccme.love.widget.SquareLayout>

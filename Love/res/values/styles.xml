@@ -500,4 +500,11 @@
         <item name="android:drawableLeft">@drawable/btn_add_selector</item>
         <item name="android:textColor">@drawable/color_common_text_selector</item>
     </style>
+    <style name="VideoAlbumTitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:background">@drawable/bg_title_bar</item>
+    </style>
 </resources>
