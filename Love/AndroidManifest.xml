@@ -49,8 +49,10 @@
         </activity>
         <activity android:name="cc.ccme.love.album.AlbumGalleryActivity" >
         </activity>
+        <activity android:name="cc.ccme.love.video.VideoActivity" >
+        </activity>
         <activity
-            android:name="cc.ccme.love.video.VideoActivity"
+            android:name="cc.ccme.love.video.VideoImagePickActivity"
              >
         </activity>
     </application>
