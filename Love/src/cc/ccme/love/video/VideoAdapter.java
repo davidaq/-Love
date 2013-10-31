@@ -2,6 +2,7 @@ package cc.ccme.love.video;
 
 import cc.ccme.love.R;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -65,7 +66,8 @@ public class VideoAdapter extends BaseAdapter {
 		    {
 				@Override
 				public void onClick(View view) {
-					System.out.println("button");
+					Intent intent = new Intent(context,VideoImagePickActivity.class);
+					context.startActivity(intent);
 					
 				}
 		    	

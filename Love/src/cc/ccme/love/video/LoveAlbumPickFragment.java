@@ -12,17 +12,21 @@ import android.widget.TextView;
 import cc.ccme.love.BaseFragment;
 import cc.ccme.love.R;
 import cc.ccme.love.event.EventDetailActivity;
+import cc.ccme.love.widget.FixedListView;
 
 public class LoveAlbumPickFragment extends BaseFragment implements OnItemClickListener{
 
 	private ListView listView;
+	
 	private AlbumPickAdapter adapter;
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.fragment_album_pick_love, null);
+		View view = inflater.inflate(R.layout.fragment_video_album_pick_love, null);
 		listView = (ListView) view.findViewById(R.id.listview);
+		
 		listView.setOnItemClickListener(this);
+		
 		adapter = new AlbumPickAdapter();
 		listView.setAdapter(adapter);
 		return view;
@@ -56,9 +60,9 @@ public class LoveAlbumPickFragment extends BaseFragment implements OnItemClickLi
 			{
 				holder = new ViewHolder();
 				convertView = getActivity().getLayoutInflater().inflate(
-						R.layout.list_item_album_pick, null);
-				holder.title = (TextView) convertView.findViewById(R.id.event_title);
-				holder.listView = (ListView) convertView.findViewById(R.id.listview);
+						R.layout.list_item_video_album_pick_love, null);
+				holder.title = (TextView) convertView.findViewById(R.id.title);
+				holder.listView = (FixedListView) convertView.findViewById(R.id.listview);
 				convertView.setTag(holder);
 			} else {
 				holder = (ViewHolder) convertView.getTag();
@@ -73,11 +77,13 @@ public class LoveAlbumPickFragment extends BaseFragment implements OnItemClickLi
 	class ViewHolder 
 	{
 		public TextView title;
-		public ListView listView;
+		public FixedListView listView;
 	}
 
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View view, int position, long arg3) {
 		startActivity(EventDetailActivity.class);		
 	}
+
+	
 }

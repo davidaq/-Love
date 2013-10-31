@@ -42,7 +42,7 @@ public class AlbumListAdapter extends BaseAdapter {
 			holder = new ViewHolder();
 			LayoutInflater inflater = LayoutInflater.from(context);
 			convertView = inflater.inflate(
-					R.layout.list_item_album_pick_content, null);
+					R.layout.list_item_video_album_pick_love_content, null);
 			holder.title = (TextView) convertView
 					.findViewById(R.id.event_title);
 			holder.image = (ImageView) convertView.findViewById(R.id.image);
