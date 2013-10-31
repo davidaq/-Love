@@ -99,5 +99,7 @@
     <string name="video_title">选择照片</string>
     <string name="video_button_add">添加元素</string>
     <string name="video_edit_hint">视频标题</string>
+    <string name="video_tab_love">Love相册</string>
+    <string name="video_tab_local">本地相册</string>
 
 </resources>
