@@ -65,13 +65,13 @@
  
                 <fragment
                     android:id="@+id/album_love"
-                    android:name="cc.ccme.love.event.BaseEventFragment"
+                    android:name="cc.ccme.love.video.LoveAlbumPickFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
                 <fragment
                     android:id="@+id/album_local"
-                    android:name="cc.ccme.love.event.EventInvitedFragment"
+                    android:name="cc.ccme.love.video.LocalAlbumPickFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
