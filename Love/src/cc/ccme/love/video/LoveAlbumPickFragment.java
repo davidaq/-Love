@@ -56,13 +56,15 @@ public class LoveAlbumPickFragment extends BaseFragment implements OnItemClickLi
 			{
 				holder = new ViewHolder();
 				convertView = getActivity().getLayoutInflater().inflate(
-						R.layout.fragment_album_pick_love, null);
+						R.layout.list_item_album_pick, null);
 				holder.title = (TextView) convertView.findViewById(R.id.event_title);
 				holder.listView = (ListView) convertView.findViewById(R.id.listview);
 				convertView.setTag(holder);
 			} else {
 				holder = (ViewHolder) convertView.getTag();
 			}
+			AlbumListAdapter albumListAdapter  = new AlbumListAdapter(getActivity());
+			holder.listView.setAdapter(albumListAdapter);
 			return convertView;
 		}
 		
