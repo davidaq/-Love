@@ -55,6 +55,12 @@
             android:name="cc.ccme.love.video.VideoImagePickActivity"
              >
         </activity>
+        <activity android:name="cc.ccme.love.video.VideoImageSelectBaseActivity" >
+        </activity>
+        <activity android:name="cc.ccme.love.video.ImagePickActivity" >
+        </activity>
+        <activity android:name="cc.ccme.love.video.VideoPickActivity" >
+        </activity>
     </application>
 
 </manifest>
