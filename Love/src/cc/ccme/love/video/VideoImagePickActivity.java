@@ -13,10 +13,11 @@ public class VideoImagePickActivity extends BaseActivity implements OnClickListe
 	private TabHost tabHost;
 	private ImageButton btnBack,btnOk;
 	private View tabSelectorLove,tabSelectorLocal;
+	public static  VideoImagePickActivity instance = null;
 	@Override
 	protected void setContent() {
 		setContentView(R.layout.activity_video_image_pick);
-		
+		instance = this;
 	}
 
 	@Override

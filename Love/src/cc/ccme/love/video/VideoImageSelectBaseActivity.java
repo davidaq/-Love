@@ -196,7 +196,8 @@ public abstract  class VideoImageSelectBaseActivity extends BaseActivity impleme
 			finish();
 			break;
 		case R.id.btn_ok:
-			
+			VideoImagePickActivity.instance.finish();
+			finish();
 			break;
 		}
 		
@@ -232,8 +233,8 @@ public abstract  class VideoImageSelectBaseActivity extends BaseActivity impleme
 						R.layout.grid_item_select, null);
 				holder.image = (ImageView) convertView.findViewById(R.id.image);
 				holder.box = (CheckedView) convertView.findViewById(R.id.checkbox);
-				holder.box.setClickable(true);
-				holder.box.setEnabled(true);
+				holder.box.setClickable(false);
+				holder.box.setEnabled(false);
 				convertView.setTag(holder);
 				final ViewHolder _holder = holder;
 				holder.image.setOnTouchListener(new OnTouchListener() {
