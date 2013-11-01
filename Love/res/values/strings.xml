@@ -101,5 +101,7 @@
     <string name="video_edit_hint">视频标题</string>
     <string name="video_tab_love">Love相册</string>
     <string name="video_tab_local">本地相册</string>
+    <string name="video_pick_local_image">图片</string>
+    <string name="video_pick_local_video">视频</string>
 
 </resources>

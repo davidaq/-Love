@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cc.ccme.love.widget.SquareLayout 
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:padding="2dp"
+    >
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/photo_bg"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_name"/>
+	<cc.ccme.love.widget.CheckedView
+	    android:id="@+id/checkbox"
+	    android:layout_height="20dp"
+	    android:layout_width="20dp"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentBottom="true"
+	    android:checked="false"
+	    android:focusable="false"
+	    android:button="@null"
+	    android:focusableInTouchMode="false" 
+	    android:text=""/>
+</cc.ccme.love.widget.SquareLayout>

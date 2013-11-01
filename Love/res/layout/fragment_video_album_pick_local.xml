@@ -3,10 +3,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    <ListView
-        android:id="@+id/listview"
+
+    <RelativeLayout
+        android:id="@+id/relative_image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        style="@style/ListViewWithDivider"/>
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_selector" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/video_cover_size"
+            android:layout_height="@dimen/video_cover_size"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_album_icon" />
+
+        <TextView
+            android:id="@+id/title_image"
+            style="@style/VideoAlbumItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/video_cover_size"
+            android:layout_alignBottom="@id/image"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/image"
+            android:padding="20dp"
+            android:text="@string/video_pick_local_image" />
+    </RelativeLayout>
+	<ImageView
+	    android:layout_width="match_parent"
+	    android:layout_height="1dp"
+	    android:background="@drawable/list_divider"
+	    android:contentDescription="@string/app_name"/>
+    <RelativeLayout
+        android:id="@+id/relative_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_selector" >
+
+        <ImageView
+            android:id="@+id/video"
+            android:layout_width="@dimen/video_cover_size"
+            android:layout_height="@dimen/video_cover_size"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_album_icon" />
+
+        <TextView
+            android:id="@+id/title_video"
+            style="@style/VideoAlbumItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/video_cover_size"
+            android:layout_alignBottom="@id/video"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/video"
+            android:padding="20dp"
+            android:text="@string/video_pick_local_video" />
+    </RelativeLayout>
 
 </LinearLayout>
