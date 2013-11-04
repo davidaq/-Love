@@ -513,4 +513,56 @@
         <item name="android:textColor">@drawable/color_common_text_selector</item>
         <item name="android:drawableRight">@drawable/ic_item_go_selector</item>
     </style>
+    
+    <!-- Values for Congrate -->
+    <style name="CongrateText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">left|top</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:maxLines">4</item>
+    </style>
+    <style name="CongratePost">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="CongrateName">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="CongrateCount">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:drawableLeft">@drawable/ic_btn_congrate_good</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="CongrateDate">
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="CongrateEdit">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">left|top</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:maxLines">6</item>
+        <item name="android:minLines">6</item>
+        <item name="android:background">@null</item>
+        <item name="android:hint">@string/congrate_hint</item>
+    </style>
 </resources>

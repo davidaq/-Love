@@ -51,15 +51,21 @@
         </activity>
         <activity android:name="cc.ccme.love.video.VideoActivity" >
         </activity>
-        <activity
-            android:name="cc.ccme.love.video.VideoImagePickActivity"
-             >
+        <activity android:name="cc.ccme.love.video.VideoImagePickActivity" >
         </activity>
         <activity android:name="cc.ccme.love.video.VideoImageSelectBaseActivity" >
         </activity>
         <activity android:name="cc.ccme.love.video.ImagePickActivity" >
         </activity>
         <activity android:name="cc.ccme.love.video.VideoPickActivity" >
+        </activity>
+        <activity
+            android:name="cc.ccme.love.congrate.CongrateActivity"
+             >
+        </activity>
+        <activity
+            android:name="cc.ccme.love.congrate.CongratePostActivity"
+             >
         </activity>
     </application>
 

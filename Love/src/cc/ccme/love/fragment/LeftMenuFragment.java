@@ -3,6 +3,7 @@ package cc.ccme.love.fragment;
 import cc.ccme.love.BaseFragment;
 import cc.ccme.love.R;
 import cc.ccme.love.album.GalleryActivity;
+import cc.ccme.love.congrate.CongrateActivity;
 import cc.ccme.love.event.EventActivity;
 import cc.ccme.love.person.PersonActivity;
 import cc.ccme.love.video.VideoActivity;
@@ -102,6 +103,7 @@ public class LeftMenuFragment extends BaseFragment implements OnClickListener {
 			startActivity(VideoActivity.class);
 			break;
 		case R.id.congrate:
+			startActivity(CongrateActivity.class);
 			break;
 		case R.id.settings:
 			break;
