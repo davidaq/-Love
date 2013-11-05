@@ -6,6 +6,7 @@ import cc.ccme.love.album.GalleryActivity;
 import cc.ccme.love.congrate.CongrateActivity;
 import cc.ccme.love.event.EventActivity;
 import cc.ccme.love.person.PersonActivity;
+import cc.ccme.love.settings.SettingsActivity;
 import cc.ccme.love.video.VideoActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -85,8 +86,7 @@ public class LeftMenuFragment extends BaseFragment implements OnClickListener {
 		case R.id.content_message:
 			break;
 		case R.id.private_message:
-			break;
-		
+			break;		
 		case R.id.broadcast:
 			leftToggle();
 			break;
@@ -106,6 +106,7 @@ public class LeftMenuFragment extends BaseFragment implements OnClickListener {
 			startActivity(CongrateActivity.class);
 			break;
 		case R.id.settings:
+			startActivity(SettingsActivity.class);
 			break;
 		}
 		
