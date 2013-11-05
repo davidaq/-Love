@@ -59,13 +59,11 @@
         </activity>
         <activity android:name="cc.ccme.love.video.VideoPickActivity" >
         </activity>
-        <activity
-            android:name="cc.ccme.love.congrate.CongrateActivity"
-             >
+        <activity android:name="cc.ccme.love.congrate.CongrateActivity" >
         </activity>
-        <activity
-            android:name="cc.ccme.love.congrate.CongratePostActivity"
-             >
+        <activity android:name="cc.ccme.love.congrate.CongratePostActivity" >
+        </activity>
+        <activity android:name="cc.ccme.love.settings.SettingsActivity" >
         </activity>
     </application>
 
