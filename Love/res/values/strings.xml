@@ -22,6 +22,12 @@
     <string name="testalbumnum">相册(3)</string>
     <string name="testalbumcount">(1900)</string>
     <string name="testuploaddate">上传于14小时前</string>
+    <string name="testupdate">2.1</string>
+    <string name="testcache">21.6M</string>
+    <string name="testnotify">响铃</string>
+    <string name="testnewversion">1. 新增更多1080p高清大片；
+2. 低端机播放视频更加流畅；
+3. 解决用户反馈的问题；</string>
 
     <!-- Values for title -->
     <string name="title_broadcast">广播流</string>
@@ -109,5 +115,20 @@
     <string name="congrate_post">发表祝福</string>
     <string name="congrate_post_title">发表祝福</string>
     <string name="congrate_hint">输入祝福内容</string>
+    
+    <!-- Values for Settings -->
+    <string name="settings_update">检查更新</string>
+    <string name="settings_cache">清除缓存</string>
+    <string name="settings_notify">通知类型</string>
+    <string name="settings_duty">免责声明</string>
+    <string name="settings_feedback">意见反馈</string>
+    <string name="settings_about">关于我们</string>
+    <string name="settings_abort">退出登陆</string>
+    <string name="settings_new_update">更新</string>
+    <string name="settings_new_version">发现新版本</string>
+    <string name="settings_notify_ring">响铃</string>
+    <string name="settings_notify_quake">震动</string>
+    <string name="settings_notify_none">无</string>
+
 
 </resources>

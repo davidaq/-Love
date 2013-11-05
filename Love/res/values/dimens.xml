@@ -162,4 +162,9 @@
 	<dimen name="congrate_edit_selector_margin">30dp</dimen>
 	<dimen name="congrate_edit_item_width">87dp</dimen>
 	<dimen name="congrate_edit_item_height">60dp</dimen>
+	
+	<!-- Values for settings -->
+	<dimen name="settings_item_height">45dp</dimen>
+	<dimen name="settings_margin">15dp</dimen>
+	<dimen name="settings_margin_left">20dp</dimen>
 </resources>

@@ -565,4 +565,27 @@
         <item name="android:background">@null</item>
         <item name="android:hint">@string/congrate_hint</item>
     </style>
+    
+    <!-- Values for Settings -->
+    <style name="SettingsCommonLeft">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@drawable/color_common_text_selector</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="SettingsCommonRight">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">@drawable/color_common_text_selector</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="SettingsNewVersion">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:singleLine">false</item>
+    </style>
 </resources>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackBaseColor"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_title_bar"
+        android:padding="10dp" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/btn_size"
+            android:layout_height="@dimen/btn_size"
+            android:background="@drawable/btn_back_selector"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/title_text"
+            style="@style/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/settings" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/settings_margin"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/item_update"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_item_height"
+            android:background="@drawable/bg_settings_top_selector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                style="@style/SettingsCommonLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_update" />
+
+            <TextView
+                android:id="@+id/text_update"
+                style="@style/SettingsCommonLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/testupdate" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/item_cache"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_item_height"
+            android:background="@drawable/bg_settings_mid_selector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                style="@style/SettingsCommonLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_cache" />
+
+            <TextView
+                android:id="@+id/text_cache"
+                style="@style/SettingsCommonLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/testcache" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/item_notify"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_item_height"
+            android:background="@drawable/bg_settings_bottom_selector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                style="@style/SettingsCommonLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_notify" />
+
+            <TextView
+                android:id="@+id/text_notify"
+                style="@style/SettingsCommonLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/testnotify" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/settings_margin"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/item_duty"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_item_height"
+            android:background="@drawable/bg_settings_top_selector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                style="@style/SettingsCommonLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_duty" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/item_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_item_height"
+            android:background="@drawable/bg_settings_mid_selector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                style="@style/SettingsCommonLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_feedback" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/item_about"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_item_height"
+            android:background="@drawable/bg_settings_bottom_selector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                style="@style/SettingsCommonLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_about" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_abort"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_item_height"
+        android:layout_margin="@dimen/settings_margin"
+        android:background="@drawable/btn_common_selector"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+
+        <TextView
+            style="@style/SettingsCommonLeft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_abort" />
+    </RelativeLayout>
+
+</LinearLayout>

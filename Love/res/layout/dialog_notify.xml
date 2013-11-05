@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/Translucent">
+    <RadioGroup
+                android:id="@+id/group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_common_radio"
+                android:orientation="vertical" 
+                android:padding="0dp" >
+
+                <RadioButton
+                    android:id="@+id/radio_ring"
+                    style="@style/EventCreateRadio"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/event_create_radio_height"
+                    android:layout_marginRight="@dimen/event_create_radio_margin"
+                    android:checked="true"
+                    android:text="@string/settings_notify_ring" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/divider_radio" />
+
+                <RadioButton
+                    android:id="@+id/radio_quake"
+                    style="@style/EventCreateRadio"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/event_create_radio_height"
+                    android:layout_marginRight="@dimen/event_create_radio_margin"
+                    android:text="@string/settings_notify_quake" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/divider_radio" />
+
+                <RadioButton
+                    android:id="@+id/radio_none"
+                    style="@style/EventCreateRadio"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/event_create_radio_height"
+                    android:layout_marginRight="@dimen/event_create_radio_margin"
+                    android:text="@string/settings_notify_none" />
+            </RadioGroup>
+    
+
+</LinearLayout>
