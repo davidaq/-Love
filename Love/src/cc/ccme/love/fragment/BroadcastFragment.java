@@ -2,6 +2,8 @@ package cc.ccme.love.fragment;
 
 import cc.ccme.love.BaseFragment;
 import cc.ccme.love.R;
+import cc.ccme.love.broadcast.BroadcastCommentActivity;
+import cc.ccme.love.widget.Player;
 import cc.ccme.love.widget.XListView;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -94,12 +96,22 @@ public class BroadcastFragment extends BaseFragment implements OnClickListener {
 				holder.btnShare = (ImageButton) convertView.findViewById(R.id.btn_share);
 				holder.commentCount = (TextView) convertView.findViewById(R.id.text_comment_count);
 				holder.favorCount = (TextView) convertView.findViewById(R.id.text_favor_count);
-				
+				holder.player = (Player) convertView.findViewById(R.id.player);
 				convertView.setTag(holder);
 			} else {
 				holder = (ViewHolder) convertView.getTag();
 			}
-			
+			holder.player.setResource("http://oss.ccme.cc/db3f58e9-306e-48af-9c90-1bb1fb373e58_fit.mp4");
+			holder.btnComment.setOnClickListener(new OnClickListener()
+			{
+
+				@Override
+				public void onClick(View arg0) {
+					startActivity(BroadcastCommentActivity.class);
+					
+				}
+				
+			});
 			return convertView;
 		}
     	
@@ -108,6 +120,7 @@ public class BroadcastFragment extends BaseFragment implements OnClickListener {
     class ViewHolder
     {
     	public ImageView avatar;
+    	public Player player;
     	public TextView videoName,soundName,timeStamp;
     	public ImageButton btnComment,btnShare,btnFavor;
     	public TextView commentCount,favorCount;
