@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/comment_header_good_height"
+    android:background="@color/BackBaseColor"
+     >
+    <ImageView
+        android:id="@+id/btn_good"
+        android:layout_width="@dimen/comment_header_good_button_size"
+        android:layout_height="@dimen/comment_header_good_button_size"
+        android:background="@drawable/btn_favor_selector"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/comment_header_good_button_margin"
+        android:contentDescription="@string/app_name"/> 
+    <ImageView
+        android:id="@+id/divider"
+        android:layout_toRightOf="@id/btn_good"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/divider_vertical" 
+        android:contentDescription="@string/app_name"/>
+    
+    <cc.ccme.love.widget.HorizontalListView
+        android:id="@+id/listview"
+        android:layout_toRightOf="@id/divider"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="@dimen/comment_listview_height"/>
+    
+
+</RelativeLayout>

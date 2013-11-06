@@ -52,13 +52,11 @@
         
     </RelativeLayout>
     
-    <ImageView
-        android:id="@+id/image"
+    <cc.ccme.love.widget.Player
+        android:id="@+id/player"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:src="@drawable/default_bg"
-        android:contentDescription="@string/app_name"/>
+        android:layout_height="@dimen/video_height"
+        />
     
     <LinearLayout
         android:layout_width="match_parent"

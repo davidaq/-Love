@@ -2,7 +2,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/BackBaseColor"
     android:orientation="vertical" >
-    
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_title_bar"
+        android:padding="10dp" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/btn_size"
+            android:layout_height="@dimen/btn_size"
+            android:background="@drawable/btn_back_selector"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/title_text"
+            style="@style/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/comment_title" />
+    </RelativeLayout>
+
+    <cc.ccme.love.widget.XListView
+        android:id="@+id/listview"
+        style="@style/ListViewWithDivider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

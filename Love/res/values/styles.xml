@@ -588,4 +588,37 @@
         <item name="android:padding">2dp</item>
         <item name="android:singleLine">false</item>
     </style>
+    
+    <!-- Values for comment -->
+    <style name="CommentUsername">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">left|bottom</item>
+        <item name="android:textColor">@drawable/color_common_text_selector</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="CommentDate">
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">right|bottom</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="CommentContent">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">left|top</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:minLines">3</item>
+        <item name="android:maxLines">8</item>
+    </style>
+    <style name="SeekBar" >
+        <item name="android:progressDrawable">@drawable/bg_seek_bar_selector</item>
+        <item name="android:thumb">@drawable/btn_seekbar_selector</item>
+        <item name="android:thumbOffset">10dp</item>
+        <item name="android:maxHeight">5dp</item>
+        <item name="android:minHeight">5dp</item>
+        <item name="android:max">100</item>
+    </style>
 </resources>

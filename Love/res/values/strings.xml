@@ -130,5 +130,9 @@
     <string name="settings_notify_quake">震动</string>
     <string name="settings_notify_none">无</string>
 
+    <!-- Values for comment -->
+    <string name="comment_title">评论</string>
+    <string name="hlistview_hint_ready">松开返回</string>
+	<string name="hlistview_hint_normal">到底啦！</string>
 
 </resources>

@@ -167,4 +167,15 @@
 	<dimen name="settings_item_height">45dp</dimen>
 	<dimen name="settings_margin">15dp</dimen>
 	<dimen name="settings_margin_left">20dp</dimen>
+	
+	<!-- Values for comment -->
+	<dimen name="comment_header_good_height">100dp</dimen>
+	<dimen name="comment_header_good_button_size">30dp</dimen>
+	<dimen name="comment_header_good_button_margin">20dp</dimen>
+	<dimen name="comment_avatar_size">50dp</dimen>
+	<dimen name="comment_listview_height">60dp</dimen>
+	
+	<!-- Values for video -->
+	<dimen name="video_btn_size">40dp</dimen>
+	<dimen name="video_height">250dp</dimen>
 </resources>
