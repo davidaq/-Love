@@ -63,6 +63,12 @@ public final class HttpRequestManager implements Runnable {
 
 	public static void buildRequest(RequestObject<?> requestObj,
 			HttpPost request) throws Exception {
+		if(RequestObject.userid != null) {
+			request.addHeader("userid", RequestObject.userid);
+		}
+		if(RequestObject.password != null) {
+			request.addHeader("password", RequestObject.password);
+		}
 		List<KeyValuePair> params = requestObj.getParams();
 		MultipartEntityBuilder entityBuilder = null;
 		boolean useJson = true;
