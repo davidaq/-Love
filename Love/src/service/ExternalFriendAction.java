@@ -1,6 +1,6 @@
 package service;
 import util.RequestObject;
-import bean.*;
+
 public final class ExternalFriendAction {
 		public static interface OnSyncWeiBoFriendsSuccessListener {
 			public void onSyncWeiBoFriendsSuccess();
