@@ -9,7 +9,7 @@ public final class VersionAction {
 		public static RequestObject<OnGetCurrentVersionSuccessListener> getCurrentVersion(String os) {
 			RequestObject<OnGetCurrentVersionSuccessListener> obj = new RequestObject<OnGetCurrentVersionSuccessListener>();
 			obj.setListenerInterfaceClass(OnGetCurrentVersionSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/getversion" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/getversion" + ".json");
 			obj.addParam("os", os);
 			obj.enque();
 			return obj;

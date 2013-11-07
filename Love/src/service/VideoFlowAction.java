@@ -9,7 +9,7 @@ public final class VideoFlowAction {
 		public static RequestObject<OnGetVideoListForNoLoginSuccessListener> getVideoListForNoLogin(long timeStamp) {
 			RequestObject<OnGetVideoListForNoLoginSuccessListener> obj = new RequestObject<OnGetVideoListForNoLoginSuccessListener>();
 			obj.setListenerInterfaceClass(OnGetVideoListForNoLoginSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/getvideolistfornologin" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/getvideolistfornologin" + ".json");
 			obj.addParam("timestamp", timeStamp);
 			obj.enque();
 			return obj;
@@ -21,7 +21,7 @@ public final class VideoFlowAction {
 		public static RequestObject<OnGetVideoFlowSuccessListener> getVideoFlow(Integer type, long timeStamp) {
 			RequestObject<OnGetVideoFlowSuccessListener> obj = new RequestObject<OnGetVideoFlowSuccessListener>();
 			obj.setListenerInterfaceClass(OnGetVideoFlowSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/getvideoflow" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/getvideoflow" + ".json");
 			obj.addParam("type", type);
 			obj.addParam("timestamp", timeStamp);
 			obj.enque();
@@ -34,7 +34,7 @@ public final class VideoFlowAction {
 		public static RequestObject<OnGetVideoFlowReviewSuccessListener> getVideoFlowReview(String videoFlowId) {
 			RequestObject<OnGetVideoFlowReviewSuccessListener> obj = new RequestObject<OnGetVideoFlowReviewSuccessListener>();
 			obj.setListenerInterfaceClass(OnGetVideoFlowReviewSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/getvideoflowreview" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/getvideoflowreview" + ".json");
 			obj.addParam("videoFlowId", videoFlowId);
 			obj.enque();
 			return obj;
@@ -46,7 +46,7 @@ public final class VideoFlowAction {
 		public static RequestObject<OnVideoFlowPraiseSuccessListener> videoFlowPraise(String videoFlowId) {
 			RequestObject<OnVideoFlowPraiseSuccessListener> obj = new RequestObject<OnVideoFlowPraiseSuccessListener>();
 			obj.setListenerInterfaceClass(OnVideoFlowPraiseSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/videoflowpraise" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/videoflowpraise" + ".json");
 			obj.addParam("videoFlowId", videoFlowId);
 			obj.enque();
 			return obj;
@@ -58,7 +58,7 @@ public final class VideoFlowAction {
 		public static RequestObject<OnDeleteVFReviewSuccessListener> deleteVFReview(String reviewId) {
 			RequestObject<OnDeleteVFReviewSuccessListener> obj = new RequestObject<OnDeleteVFReviewSuccessListener>();
 			obj.setListenerInterfaceClass(OnDeleteVFReviewSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/deletevfreview" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/deletevfreview" + ".json");
 			obj.addParam("reviewId", reviewId);
 			obj.enque();
 			return obj;
@@ -70,7 +70,7 @@ public final class VideoFlowAction {
 		public static RequestObject<OnGetMusicListSuccessListener> getMusicList() {
 			RequestObject<OnGetMusicListSuccessListener> obj = new RequestObject<OnGetMusicListSuccessListener>();
 			obj.setListenerInterfaceClass(OnGetMusicListSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/getmusiclist" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/getmusiclist" + ".json");
 			obj.enque();
 			return obj;
 		}
@@ -81,7 +81,7 @@ public final class VideoFlowAction {
 		public static RequestObject<OnShareVideoFlowSuccessListener> shareVideoFlow(Review review) {
 			RequestObject<OnShareVideoFlowSuccessListener> obj = new RequestObject<OnShareVideoFlowSuccessListener>();
 			obj.setListenerInterfaceClass(OnShareVideoFlowSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/sharevideoflow" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/sharevideoflow" + ".json");
 			obj.setObj(review);
 			obj.enque();
 			return obj;
@@ -93,7 +93,7 @@ public final class VideoFlowAction {
 		public static RequestObject<OnUploadVideoPhotoSuccessListener> uploadVideoPhoto(VideoFlowVo videoFlowVo) {
 			RequestObject<OnUploadVideoPhotoSuccessListener> obj = new RequestObject<OnUploadVideoPhotoSuccessListener>();
 			obj.setListenerInterfaceClass(OnUploadVideoPhotoSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/uploadvideophoto" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/uploadvideophoto" + ".json");
 			obj.setObj(videoFlowVo);
 			obj.enque();
 			return obj;
@@ -105,7 +105,7 @@ public final class VideoFlowAction {
 		public static RequestObject<OnGetOthersVideoFlowSuccessListener> getOthersVideoFlow(String friendId, long timeStamp) {
 			RequestObject<OnGetOthersVideoFlowSuccessListener> obj = new RequestObject<OnGetOthersVideoFlowSuccessListener>();
 			obj.setListenerInterfaceClass(OnGetOthersVideoFlowSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/getothersvideoflow" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/getothersvideoflow" + ".json");
 			obj.addParam("friendid", friendId);
 			obj.addParam("timestamp", timeStamp);
 			obj.enque();

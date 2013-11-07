@@ -52,7 +52,7 @@ public final class HttpRequestManager implements Runnable {
 	private PriorityQueue<RequestObject<?>> queue = new PriorityQueue<RequestObject<?>>(
 			10, new RequestComparator());
 
-	private Executor exec = Executors.newFixedThreadPool(2);
+	private Executor exec = Executors.newFixedThreadPool(1);
 
 	public void enque(RequestObject<?> request) {
 		synchronized (queue) {

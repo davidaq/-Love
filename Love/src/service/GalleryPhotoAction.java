@@ -9,7 +9,7 @@ public final class GalleryPhotoAction {
 		public static RequestObject<OnGetPhotoByGalleryIdSuccessListener> getPhotoByGalleryId(GalleryPhoto galpho) {
 			RequestObject<OnGetPhotoByGalleryIdSuccessListener> obj = new RequestObject<OnGetPhotoByGalleryIdSuccessListener>();
 			obj.setListenerInterfaceClass(OnGetPhotoByGalleryIdSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/getphotobygalleryid" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/getphotobygalleryid" + ".json");
 			obj.setObj(galpho);
 			obj.enque();
 			return obj;
@@ -21,7 +21,7 @@ public final class GalleryPhotoAction {
 		public static RequestObject<OnUploadGalleryPhotoSuccessListener> uploadGalleryPhoto(String galleryId, String fileNames, String photoName) {
 			RequestObject<OnUploadGalleryPhotoSuccessListener> obj = new RequestObject<OnUploadGalleryPhotoSuccessListener>();
 			obj.setListenerInterfaceClass(OnUploadGalleryPhotoSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/uploadgalleryphoto" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/uploadgalleryphoto" + ".json");
 			obj.addParam("gid", galleryId);
 			obj.addParam("filenames", fileNames);
 			obj.addParam("photoname", photoName);
@@ -35,7 +35,7 @@ public final class GalleryPhotoAction {
 		public static RequestObject<OnDeleteMultiPhotoSuccessListener> deleteMultiPhoto(String galleryId, String fileIds) {
 			RequestObject<OnDeleteMultiPhotoSuccessListener> obj = new RequestObject<OnDeleteMultiPhotoSuccessListener>();
 			obj.setListenerInterfaceClass(OnDeleteMultiPhotoSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/deletemultiphoto" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/deletemultiphoto" + ".json");
 			obj.addParam("galleryId", galleryId);
 			obj.addParam("fileIds", fileIds);
 			obj.enque();
@@ -48,7 +48,7 @@ public final class GalleryPhotoAction {
 		public static RequestObject<OnMultiPhotoMigrateSuccessListener> multiPhotoMigrate(String fromGalleryId, String fileIds, String toGallery) {
 			RequestObject<OnMultiPhotoMigrateSuccessListener> obj = new RequestObject<OnMultiPhotoMigrateSuccessListener>();
 			obj.setListenerInterfaceClass(OnMultiPhotoMigrateSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/multiphotomigrate" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/multiphotomigrate" + ".json");
 			obj.addParam("fromGalleryId", fromGalleryId);
 			obj.addParam("fileIds", fileIds);
 			obj.addParam("toGallery", toGallery);
@@ -62,7 +62,7 @@ public final class GalleryPhotoAction {
 		public static RequestObject<OnGetSingleGalleryPhotoSuccessListener> getSingleGalleryPhoto(String galleryId, String fileId) {
 			RequestObject<OnGetSingleGalleryPhotoSuccessListener> obj = new RequestObject<OnGetSingleGalleryPhotoSuccessListener>();
 			obj.setListenerInterfaceClass(OnGetSingleGalleryPhotoSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/getsinglegalleryphoto" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/getsinglegalleryphoto" + ".json");
 			obj.addParam("galleryId", galleryId);
 			obj.addParam("fileId", fileId);
 			obj.enque();
@@ -75,7 +75,7 @@ public final class GalleryPhotoAction {
 		public static RequestObject<OnGetPhotoListByGalleryIdSuccessListener> getPhotoListByGalleryId(String galleryId, Integer fileType, long timeStamp) {
 			RequestObject<OnGetPhotoListByGalleryIdSuccessListener> obj = new RequestObject<OnGetPhotoListByGalleryIdSuccessListener>();
 			obj.setListenerInterfaceClass(OnGetPhotoListByGalleryIdSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/getgalleryphotolist" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/getgalleryphotolist" + ".json");
 			obj.addParam("gid", galleryId);
 			obj.addParam("filetype", fileType);
 			obj.addParam("timestamp", timeStamp);
@@ -89,7 +89,7 @@ public final class GalleryPhotoAction {
 		public static RequestObject<OnGetPhotoInfoSuccessListener> getPhotoInfo(String galleryId, String fileId) {
 			RequestObject<OnGetPhotoInfoSuccessListener> obj = new RequestObject<OnGetPhotoInfoSuccessListener>();
 			obj.setListenerInterfaceClass(OnGetPhotoInfoSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/getfileinfo" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/getfileinfo" + ".json");
 			obj.addParam("gid", galleryId);
 			obj.addParam("fid", fileId);
 			obj.enque();
@@ -102,7 +102,7 @@ public final class GalleryPhotoAction {
 		public static RequestObject<OnDeleteVideoSuccessListener> deleteVideo(String fileId) {
 			RequestObject<OnDeleteVideoSuccessListener> obj = new RequestObject<OnDeleteVideoSuccessListener>();
 			obj.setListenerInterfaceClass(OnDeleteVideoSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/deletevideo" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/deletevideo" + ".json");
 			obj.addParam("fileid", fileId);
 			obj.enque();
 			return obj;
