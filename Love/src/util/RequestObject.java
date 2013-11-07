@@ -12,6 +12,12 @@ import com.google.gson.Gson;
 
 public class RequestObject<Listener> {
 
+	/**
+	 * Options:
+	 * 
+	 * Public server: "http://223.4.129.110"
+	 * Test server: "http://123.125.209.176:8080/MarWeb"
+	 */
 	public static String baseUrl;
 	public static OnRequestFailListener globalOnFailListener;
 
@@ -19,12 +25,13 @@ public class RequestObject<Listener> {
 	private SoftReference<OnRequestFailListener> failListener;
 	private SoftReference<OnRequestProgressChangeListener> progressListener;
 	@SuppressWarnings("unused")
-	private Object doneListenerHolder, failListenerHolder, progressListenerHolder;
+	private Object doneListenerHolder, failListenerHolder,
+			progressListenerHolder;
 	private Class<?> listenerType;
 	private Object sendObj;
 	private String url;
-	private long timestamp = System.nanoTime();
-	
+	private long timestamp = System.currentTimeMillis();
+
 	public long getRequestTime() {
 		return timestamp;
 	}
@@ -86,11 +93,13 @@ public class RequestObject<Listener> {
 		return this;
 	}
 
-	public RequestObject<Listener> onProgress(OnRequestProgressChangeListener listener) {
+	public RequestObject<Listener> onProgress(
+			OnRequestProgressChangeListener listener) {
 		if (listener == null)
 			progressListener = null;
 		else
-			progressListener = new SoftReference<OnRequestProgressChangeListener>(listener);
+			progressListener = new SoftReference<OnRequestProgressChangeListener>(
+					listener);
 		return this;
 	}
 
@@ -122,9 +131,9 @@ public class RequestObject<Listener> {
 				String msg = json.getString("msg");
 				onFail(msg);
 			}
-			if(doneListener != null) {
+			if (doneListener != null) {
 				Listener l = doneListener.get();
-				if(l != null) {
+				if (l != null) {
 					Method m = listenerType.getDeclaredMethods()[0];
 					Class<?>[] args = m.getParameterTypes();
 					if (args.length > 0) {
