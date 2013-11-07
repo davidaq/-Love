@@ -19,7 +19,11 @@ public class RequestObject<Listener> {
 	 * Test server: "http://123.125.209.176:8080/MarWeb"
 	 */
 	public static String baseUrl;
+	
 	public static OnRequestFailListener globalOnFailListener;
+	
+	public static String userid = "";
+	public static String password = "";
 
 	private WeakReference<Listener> doneListener;
 	private SoftReference<OnRequestFailListener> failListener;
