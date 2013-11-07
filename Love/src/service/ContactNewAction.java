@@ -9,7 +9,7 @@ public final class ContactNewAction {
 		public static RequestObject<OnCheckMobileIsUserSuccessListener> checkMobileIsUser(String[] mobiles) {
 			RequestObject<OnCheckMobileIsUserSuccessListener> obj = new RequestObject<OnCheckMobileIsUserSuccessListener>();
 			obj.setListenerInterfaceClass(OnCheckMobileIsUserSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/checkmobileisuser" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/checkmobileisuser" + ".json");
 			obj.addParam("mobiles", mobiles);
 			obj.enque();
 			return obj;

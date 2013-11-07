@@ -118,7 +118,7 @@ public class RequestObject<Listener> {
 		HttpRequestManager.manager.enque(this);
 	}
 
-	public void onFail(String message) {
+	void onFail(String message) {
 		if (globalOnFailListener != null)
 			globalOnFailListener.onRequestFail(this, message);
 		if (failListener != null) {
@@ -128,9 +128,11 @@ public class RequestObject<Listener> {
 		}
 	}
 
-	public void onSuccess(String rawJson) {
+	void onSuccess(String rawJson) {
 		try {
 			JSONObject json = new JSONObject(rawJson);
+			if(json.has("res"))
+				json = json.getJSONObject("res");
 			int resCode = json.getInt("code");
 			if (resCode != 1) {
 				String msg = json.getString("msg");
@@ -143,8 +145,12 @@ public class RequestObject<Listener> {
 					Class<?>[] args = m.getParameterTypes();
 					if (args.length > 0) {
 						Gson gson = new Gson();
-						Object result = gson.fromJson(json.getJSONObject("obj")
-								.toString(), args[0]);
+						String contentJson;
+						if(args[0].isArray())
+							contentJson = json.getJSONArray("obj").toString();
+						else
+							contentJson = json.getJSONObject("obj").toString();
+						Object result = gson.fromJson(contentJson, args[0]);
 						m.invoke(l, result);
 					} else {
 						m.invoke(l);
@@ -152,6 +158,7 @@ public class RequestObject<Listener> {
 				}
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 }

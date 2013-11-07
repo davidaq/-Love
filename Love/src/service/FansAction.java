@@ -9,7 +9,7 @@ public final class FansAction {
 		public static RequestObject<OnAddFansSuccessListener> addFans(String fansId) {
 			RequestObject<OnAddFansSuccessListener> obj = new RequestObject<OnAddFansSuccessListener>();
 			obj.setListenerInterfaceClass(OnAddFansSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/addfans" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/addfans" + ".json");
 			obj.addParam("fansid", fansId);
 			obj.enque();
 			return obj;
@@ -21,7 +21,7 @@ public final class FansAction {
 		public static RequestObject<OnSendPrivateMsgSuccessListener> sendPrivateMsg(NotifyMsg notifyMsg) {
 			RequestObject<OnSendPrivateMsgSuccessListener> obj = new RequestObject<OnSendPrivateMsgSuccessListener>();
 			obj.setListenerInterfaceClass(OnSendPrivateMsgSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/sendprivatemsg" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/sendprivatemsg" + ".json");
 			obj.setObj(notifyMsg);
 			obj.enque();
 			return obj;
@@ -33,7 +33,7 @@ public final class FansAction {
 		public static RequestObject<OnUpdateNickNameSuccessListener> updateNickName(Friend friend) {
 			RequestObject<OnUpdateNickNameSuccessListener> obj = new RequestObject<OnUpdateNickNameSuccessListener>();
 			obj.setListenerInterfaceClass(OnUpdateNickNameSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/updatenickname" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/updatenickname" + ".json");
 			obj.setObj(friend);
 			obj.enque();
 			return obj;
@@ -45,7 +45,7 @@ public final class FansAction {
 		public static RequestObject<OnCancelFansSuccessListener> cancelFans(String fansId) {
 			RequestObject<OnCancelFansSuccessListener> obj = new RequestObject<OnCancelFansSuccessListener>();
 			obj.setListenerInterfaceClass(OnCancelFansSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/cancelfans" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/cancelfans" + ".json");
 			obj.addParam("fansid", fansId);
 			obj.enque();
 			return obj;
@@ -57,7 +57,7 @@ public final class FansAction {
 		public static RequestObject<OnAdviceFansSuccessListener> adviceFans() {
 			RequestObject<OnAdviceFansSuccessListener> obj = new RequestObject<OnAdviceFansSuccessListener>();
 			obj.setListenerInterfaceClass(OnAdviceFansSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/advicefans" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/advicefans" + ".json");
 			obj.enque();
 			return obj;
 		}

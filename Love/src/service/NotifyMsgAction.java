@@ -9,7 +9,7 @@ public final class NotifyMsgAction {
 		public static RequestObject<OnListNotifyMsgSuccessListener> listNotifyMsg(String sendUser, Integer msgCategory, Integer msgType, Integer isRead, Long timeStamp) {
 			RequestObject<OnListNotifyMsgSuccessListener> obj = new RequestObject<OnListNotifyMsgSuccessListener>();
 			obj.setListenerInterfaceClass(OnListNotifyMsgSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/notifylist" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/notifylist" + ".json");
 			obj.addParam("senduser", sendUser);
 			obj.addParam("msgcategory", msgCategory);
 			obj.addParam("msgtype", msgType);
@@ -25,7 +25,7 @@ public final class NotifyMsgAction {
 		public static RequestObject<OnListNotifyMsgAscSuccessListener> listNotifyMsgAsc(String sendUser, Integer msgCategory, Integer msgType, Integer isRead, Long timeStamp) {
 			RequestObject<OnListNotifyMsgAscSuccessListener> obj = new RequestObject<OnListNotifyMsgAscSuccessListener>();
 			obj.setListenerInterfaceClass(OnListNotifyMsgAscSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/notifylistasc" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/notifylistasc" + ".json");
 			obj.addParam("senduser", sendUser);
 			obj.addParam("msgcategory", msgCategory);
 			obj.addParam("msgtype", msgType);
@@ -41,7 +41,7 @@ public final class NotifyMsgAction {
 		public static RequestObject<OnAddNotifyMsgSuccessListener> addNotifyMsg(NotifyMsg notifyMsg) {
 			RequestObject<OnAddNotifyMsgSuccessListener> obj = new RequestObject<OnAddNotifyMsgSuccessListener>();
 			obj.setListenerInterfaceClass(OnAddNotifyMsgSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/addnotifymsg" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/addnotifymsg" + ".json");
 			obj.setObj(notifyMsg);
 			obj.enque();
 			return obj;
@@ -53,7 +53,7 @@ public final class NotifyMsgAction {
 		public static RequestObject<OnGetNotifyMsgSuccessListener> getNotifyMsg(String msgId) {
 			RequestObject<OnGetNotifyMsgSuccessListener> obj = new RequestObject<OnGetNotifyMsgSuccessListener>();
 			obj.setListenerInterfaceClass(OnGetNotifyMsgSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/getnotifymsg" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/getnotifymsg" + ".json");
 			obj.addParam("id", msgId);
 			obj.enque();
 			return obj;
@@ -65,7 +65,7 @@ public final class NotifyMsgAction {
 		public static RequestObject<OnModifyNotifyReadStateByIdSuccessListener> modifyNotifyReadStateById(String msgId) {
 			RequestObject<OnModifyNotifyReadStateByIdSuccessListener> obj = new RequestObject<OnModifyNotifyReadStateByIdSuccessListener>();
 			obj.setListenerInterfaceClass(OnModifyNotifyReadStateByIdSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/modifynotifyreadstatebyid" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/modifynotifyreadstatebyid" + ".json");
 			obj.addParam("id", msgId);
 			obj.enque();
 			return obj;
@@ -77,7 +77,7 @@ public final class NotifyMsgAction {
 		public static RequestObject<OnModifyNotifyReadStateSuccessListener> modifyNotifyReadState(String sendUserId, long timeStamp) {
 			RequestObject<OnModifyNotifyReadStateSuccessListener> obj = new RequestObject<OnModifyNotifyReadStateSuccessListener>();
 			obj.setListenerInterfaceClass(OnModifyNotifyReadStateSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "/modifynotifyreadstate" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/modifynotifyreadstate" + ".json");
 			obj.addParam("senduser", sendUserId);
 			obj.addParam("timestamp", timeStamp);
 			obj.enque();

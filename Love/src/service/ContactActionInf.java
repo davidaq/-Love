@@ -9,7 +9,7 @@ public final class ContactActionInf {
 		public static RequestObject<OnUploadSuccessListener> upload(Contact[] contacts) {
 			RequestObject<OnUploadSuccessListener> obj = new RequestObject<OnUploadSuccessListener>();
 			obj.setListenerInterfaceClass(OnUploadSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "upload" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/contactupload" + ".json");
 			obj.addParam("contacts", contacts);
 			obj.enque();
 			return obj;
@@ -21,7 +21,7 @@ public final class ContactActionInf {
 		public static RequestObject<OnDownloadSuccessListener> download() {
 			RequestObject<OnDownloadSuccessListener> obj = new RequestObject<OnDownloadSuccessListener>();
 			obj.setListenerInterfaceClass(OnDownloadSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "download" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/contactdownload" + ".json");
 			obj.enque();
 			return obj;
 		}
@@ -32,7 +32,7 @@ public final class ContactActionInf {
 		public static RequestObject<OnAddContactSuccessListener> addContact(Contact contact) {
 			RequestObject<OnAddContactSuccessListener> obj = new RequestObject<OnAddContactSuccessListener>();
 			obj.setListenerInterfaceClass(OnAddContactSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "add-contact" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/contactadd-contact" + ".json");
 			obj.setObj(contact);
 			obj.enque();
 			return obj;
@@ -44,7 +44,7 @@ public final class ContactActionInf {
 		public static RequestObject<OnAddGroupSuccessListener> addGroup(String name) {
 			RequestObject<OnAddGroupSuccessListener> obj = new RequestObject<OnAddGroupSuccessListener>();
 			obj.setListenerInterfaceClass(OnAddGroupSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "add-group" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/contactadd-group" + ".json");
 			obj.addParam("name", name);
 			obj.enque();
 			return obj;
@@ -56,7 +56,7 @@ public final class ContactActionInf {
 		public static RequestObject<OnRemoveGroupSuccessListener> removeGroup(String name) {
 			RequestObject<OnRemoveGroupSuccessListener> obj = new RequestObject<OnRemoveGroupSuccessListener>();
 			obj.setListenerInterfaceClass(OnRemoveGroupSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "remove-group" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/contactremove-group" + ".json");
 			obj.addParam("name", name);
 			obj.enque();
 			return obj;
@@ -68,7 +68,7 @@ public final class ContactActionInf {
 		public static RequestObject<OnAddToGroupSuccessListener> addToGroup(String group, String contacts) {
 			RequestObject<OnAddToGroupSuccessListener> obj = new RequestObject<OnAddToGroupSuccessListener>();
 			obj.setListenerInterfaceClass(OnAddToGroupSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "add-to-group" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/contactadd-to-group" + ".json");
 			obj.addParam("group", group);
 			obj.addParam("contacts", contacts);
 			obj.enque();
@@ -81,7 +81,7 @@ public final class ContactActionInf {
 		public static RequestObject<OnRenameGroupSuccessListener> renameGroup(String oldName, String newName) {
 			RequestObject<OnRenameGroupSuccessListener> obj = new RequestObject<OnRenameGroupSuccessListener>();
 			obj.setListenerInterfaceClass(OnRenameGroupSuccessListener.class);
-			obj.setUrl(RequestObject.baseUrl + "rename-group" + ".json");
+			obj.setUrl(RequestObject.baseUrl + "/inf/contactrename-group" + ".json");
 			obj.addParam("old", oldName);
 			obj.addParam("new", newName);
 			obj.enque();
