@@ -111,6 +111,7 @@ public class RequestObject<Listener> {
 	}
 
 	public void enque() {
+		HttpRequestManager.manager.enque(this);
 	}
 
 	public void onFail(String message) {
