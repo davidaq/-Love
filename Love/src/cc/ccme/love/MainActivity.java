@@ -12,6 +12,10 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 
 public class MainActivity extends SlidingFragmentActivity {
+	static
+	{
+		util.RequestObject.baseUrl="http://223.4.129.110";
+	}
 
 	public static SlidingMenu menuLeft,menuRight;
     @Override

@@ -16,7 +16,7 @@ import cc.ccme.love.widget.XListView;
 public class BroadcastCommentActivity extends BaseActivity implements OnClickListener{
 
 	private XListView listview;
-	private View headerGood;
+	private View headerGood,headerVideo;
 	private int headerCount = 3;
 	private HorizontalListView hListView;
 	private CommentAdapter adapter;
@@ -34,8 +34,10 @@ public class BroadcastCommentActivity extends BaseActivity implements OnClickLis
 		listview = (XListView) this.findViewById(R.id.listview);
 		headerGood = this.getLayoutInflater().inflate(
 				R.layout.header_comment_good, null);
+		headerVideo = this.getLayoutInflater().inflate(
+				R.layout.header_comment_video, null);
 		hListView = (HorizontalListView) headerGood.findViewById(R.id.listview);
-		player = new Player(this);
+		player = (Player) headerVideo.findViewById(R.id.player);
 	}
 
 	@Override
@@ -43,12 +45,20 @@ public class BroadcastCommentActivity extends BaseActivity implements OnClickLis
 		player.setResource("http://oss.ccme.cc/db3f58e9-306e-48af-9c90-1bb1fb373e58_fit.mp4");
 		btnBack.setOnClickListener(this);
 		listview.setPullLoadEnable(true);		
-		listview.addHeaderView(player);
+		listview.addHeaderView(headerVideo);
 		listview.addHeaderView(headerGood);
 		adapter = new CommentAdapter();
-		listview.setAdapter(adapter);
-		//listview.setSelection(headerCount);
+		listview.setAdapter(adapter);		
 		hListView.setAdapter(new CommentAvatarAdapter(this));
+		listview.post(new Runnable()
+		{
+			@Override
+			public void run() {
+				listview.setSelection(headerCount);
+				
+			}
+			
+		});
 		
 		
 	}

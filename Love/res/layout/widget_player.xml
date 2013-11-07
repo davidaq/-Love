@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/video_height"
+    android:layout_height="match_parent"
     android:background="@color/Black"
      >
     <cc.ccme.love.widget.LoveVideoView
         android:id="@+id/video_view"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/video_height"/>
+        android:layout_height="match_parent"/>
+    <ImageView
+	    android:id="@+id/cover"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:scaleType="centerCrop"
+	    android:contentDescription="@string/app_name"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

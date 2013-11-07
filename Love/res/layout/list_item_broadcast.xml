@@ -13,7 +13,8 @@
             android:id="@+id/avatar"
             android:layout_width="@dimen/avatar_size_broadcast"
             android:layout_height="@dimen/avatar_size_broadcast"
-            android:background="@drawable/avatar_default"
+            android:src="@drawable/avatar_default"
+            android:scaleType="centerCrop"
             android:contentDescription="@string/app_name"/>
         
         <TextView
@@ -56,6 +57,7 @@
         android:id="@+id/player"
         android:layout_width="match_parent"
         android:layout_height="@dimen/video_height"
+        android:background="@drawable/default_video_bg"
         />
     
     <LinearLayout
