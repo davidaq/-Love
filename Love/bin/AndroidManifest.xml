@@ -6,13 +6,17 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="18" />
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:name="cc.ccme.love.MyApplication" >
         <activity android:name="cc.ccme.love.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,9 +42,31 @@
             android:name="cc.ccme.love.event.EventDialogActivity"
             android:theme="@style/DialogTheme" >
         </activity>
-        <activity
-            android:name="cc.ccme.love.album.AlbumActivity"
-            >
+        <activity android:name="cc.ccme.love.album.GalleryActivity" >
+        </activity>
+        <activity android:name="cc.ccme.love.album.AlbumActivity" >
+        </activity>
+        <activity android:name="cc.ccme.love.album.AlbumContentActivity" >
+        </activity>
+        <activity android:name="cc.ccme.love.album.AlbumGalleryActivity" >
+        </activity>
+        <activity android:name="cc.ccme.love.video.VideoActivity" >
+        </activity>
+        <activity android:name="cc.ccme.love.video.VideoImagePickActivity" >
+        </activity>
+        <activity android:name="cc.ccme.love.video.VideoImageSelectBaseActivity" >
+        </activity>
+        <activity android:name="cc.ccme.love.video.ImagePickActivity" >
+        </activity>
+        <activity android:name="cc.ccme.love.video.VideoPickActivity" >
+        </activity>
+        <activity android:name="cc.ccme.love.congrate.CongrateActivity" >
+        </activity>
+        <activity android:name="cc.ccme.love.congrate.CongratePostActivity" >
+        </activity>
+        <activity android:name="cc.ccme.love.settings.SettingsActivity" >
+        </activity>
+        <activity android:name="cc.ccme.love.broadcast.BroadcastCommentActivity" >
         </activity>
     </application>
 
