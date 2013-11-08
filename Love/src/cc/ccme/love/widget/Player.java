@@ -5,11 +5,15 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
+
+import cc.ccme.love.MyApplication;
 import cc.ccme.love.R;
-import cc.ccme.love.util.ImageManager;
 import cc.ccme.love.util.ParseUtil;
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
@@ -33,11 +37,9 @@ public class Player extends RelativeLayout {
 	private ArrayList<String> picList;
 	private boolean hasPlayed = false;
 	private Context context;
-	private Timer mTimer;
-	private ImageManager manager;
 	private int currentItem = 0;
 	private int totalItem = 0;
-	
+	private ImageLoader imageLoader;
 
 	public Player(Context context) {
 		this(context, null);
@@ -52,10 +54,11 @@ public class Player extends RelativeLayout {
 	public Player(final Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		this.context = context;
+		imageLoader = ((MyApplication) context.getApplicationContext())
+				.getLoader();
 		View view = View.inflate(context, R.layout.widget_player, null);
 		this.addView(view);
 		picList = new ArrayList<String>();
-		manager = ImageManager.from(context);
 		btnPlay = (ToggleButton) view.findViewById(R.id.btn_play);
 		btnZoom = (ToggleButton) view.findViewById(R.id.btn_zoom);
 		videoView = (LoveVideoView) view.findViewById(R.id.video_view);
@@ -91,7 +94,23 @@ public class Player extends RelativeLayout {
 
 	public Handler mHandler = new Handler() {
 		public void handleMessage(Message msg) {
-			manager.displayImage(cover, ParseUtil.parseImageFit(picList.get(currentItem)), 0);
+			if (totalItem > 0) {
+				imageLoader.loadImage(
+						ParseUtil.parseImageFit(picList.get(currentItem)),
+						new SimpleImageLoadingListener() {
+							@Override
+							public void onLoadingComplete(String imageUri,
+									View view, Bitmap loadedImage) {
+								cover.setImageBitmap(loadedImage);
+								mHandler.sendEmptyMessageDelayed(0, 4000);
+							}
+						});
+				if (currentItem < totalItem - 1)
+					currentItem++;
+				else
+					currentItem = 0;
+			}
+			
 		}
 	};
 
@@ -133,26 +152,14 @@ public class Player extends RelativeLayout {
 
 	public void setFlieList(List<String> list) {
 		this.picList = (ArrayList<String>) list;
-		totalItem = list.size() - 1;
+		totalItem = list.size();
 	}
 
 	public void startSwitch() {
-		mTimer = new Timer();
-		mTimer.schedule(new TimerTask() {
-			@Override
-			public void run() {
-				mHandler.sendEmptyMessage(0);
-				if(currentItem<totalItem)
-					currentItem++;
-				else
-					currentItem = 0;
-			}
-		}, 0 * 1000, 3 * 1000);
+		mHandler.sendEmptyMessageDelayed(0, 0);
 	}
-	
-	public void stopSwitch()
-	{		
-		mTimer.cancel();
+
+	public void stopSwitch() {
 		cover.setVisibility(View.GONE);
 	}
 

@@ -1,76 +1,50 @@
 package cc.ccme.love;
 
-import org.apache.http.HttpVersion;
-import org.apache.http.client.HttpClient;
-import org.apache.http.conn.ClientConnectionManager;
-import org.apache.http.conn.scheme.PlainSocketFactory;
-import org.apache.http.conn.scheme.Scheme;
-import org.apache.http.conn.scheme.SchemeRegistry;
-import org.apache.http.conn.ssl.SSLSocketFactory;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
-import org.apache.http.params.HttpProtocolParams;
-import org.apache.http.protocol.HTTP;
-
+import com.nostra13.universalimageloader.cache.disc.naming.HashCodeFileNameGenerator;
+import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.nostra13.universalimageloader.core.decode.BaseImageDecoder;
+import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 import android.app.Application;
+import android.graphics.Bitmap.CompressFormat;
 
 public class MyApplication extends Application {
 	
-	private HttpClient httpClient;
-	public boolean isLogin = false;
-
-	@Override
-	public void onCreate() {
-		super.onCreate();
-		httpClient = this.createHttpClient();
-	}
-
-	@Override
-	public void onLowMemory() {
-		super.onLowMemory();
-		this.shutdownHttpClient();
-	}
-
-	@Override
-	public void onTerminate() {
-		super.onTerminate();
-		this.shutdownHttpClient();
-	}
-
-	// 创建HttpClient实例
-	private HttpClient createHttpClient() {
-		HttpParams params = new BasicHttpParams();
-		HttpProtocolParams.setVersion(params, HttpVersion.HTTP_1_1);
-		HttpProtocolParams.setContentCharset(params,
-				HTTP.DEFAULT_CONTENT_CHARSET);
-		HttpProtocolParams.setUseExpectContinue(params, true);
-		HttpConnectionParams.setConnectionTimeout(params, 20 * 1000);
-		HttpConnectionParams.setSoTimeout(params, 20 * 1000);
-		HttpConnectionParams.setSocketBufferSize(params, 8192);
-		SchemeRegistry schReg = new SchemeRegistry();
-		schReg.register(new Scheme("http", PlainSocketFactory
-				.getSocketFactory(), 80));
-		schReg.register(new Scheme("https",
-				SSLSocketFactory.getSocketFactory(), 443));
-
-		ClientConnectionManager connMgr = new ThreadSafeClientConnManager(
-				params, schReg);
-
-		return new DefaultHttpClient(connMgr, params);
-	}
-
-	// 关闭连接管理器并释放资源
-	private void shutdownHttpClient() {
-		if (httpClient != null && httpClient.getConnectionManager() != null) {
-			httpClient.getConnectionManager().shutdown();
-		}
-	}
-
-	// 对外提供HttpClient实例
-	public HttpClient getHttpClient() {
-		return httpClient;
-	}
+	public ImageLoader imageLoader = ImageLoader.getInstance();
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
+        .cacheInMemory(true)
+        .cacheOnDisc(true)
+        .build();
+        // Create global configuration and initialize ImageLoader with this configuration
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext())
+        .memoryCacheExtraOptions(480, 800) // default = device screen dimensions
+        .discCacheExtraOptions(480, 800, CompressFormat.JPEG, 75, null)
+        .threadPoolSize(3) // default
+        .threadPriority(Thread.NORM_PRIORITY - 1) // default
+        .tasksProcessingOrder(QueueProcessingType.FIFO) // default
+        .denyCacheImageMultipleSizesInMemory()
+        .memoryCache(new LruMemoryCache(2 * 1024 * 1024))
+        .memoryCacheSize(2 * 1024 * 1024)
+        .memoryCacheSizePercentage(13) // default
+        .discCacheSize(50 * 1024 * 1024)
+        .discCacheFileCount(100)
+        .discCacheFileNameGenerator(new HashCodeFileNameGenerator()) // default
+        .imageDownloader(new BaseImageDownloader(this)) // default
+        .imageDecoder(new BaseImageDecoder(true)) // default
+        .defaultDisplayImageOptions(DisplayImageOptions.createSimple()) // default
+        .writeDebugLogs()
+        .defaultDisplayImageOptions(defaultOptions)
+        .build();
+        imageLoader.init(config);
+    }
+    public ImageLoader getLoader()
+    {
+    	return this.imageLoader;
+    }
 }

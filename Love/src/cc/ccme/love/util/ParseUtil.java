@@ -4,7 +4,6 @@ public class ParseUtil {
 
 	public static String parseImageFit(String url)
 	{
-		System.out.println(url);
 		String[] imgArr = url.split("\\.");
 		return "http://oss.ccme.cc/" + imgArr[0] +"_fit." + imgArr[1];
 	}

@@ -2,15 +2,19 @@ package cc.ccme.love.fragment;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.assist.PauseOnScrollListener;
+
 import bean.VideoFlowExt;
 import service.VideoFlowAction.OnGetVideoListForNoLoginSuccessListener;
 import util.OnRequestFailListener;
 import util.RequestObject;
 import cc.ccme.love.BaseFragment;
+import cc.ccme.love.MyApplication;
 import cc.ccme.love.R;
 import cc.ccme.love.broadcast.BroadcastCommentActivity;
 import cc.ccme.love.util.DateUtil;
-import cc.ccme.love.util.ImageManager;
 import cc.ccme.love.util.ParseUtil;
 import cc.ccme.love.widget.Player;
 import cc.ccme.love.widget.Player.OnFullScreenListener;
@@ -32,8 +36,9 @@ public class BroadcastFragment extends BaseFragment implements OnClickListener,
 	private BroadcastAdapter adapter;
 	private ImageButton btnLeftMenu, btnContact;
 	private ArrayList<VideoFlowExt> videoList;
-	private ImageManager manager;
-
+	private ImageLoader imageLoader;
+	private MyApplication app;
+	private long pagerHint = 0xfffffffffffL;
 	public BroadcastFragment() {
 	}
 
@@ -58,15 +63,19 @@ public class BroadcastFragment extends BaseFragment implements OnClickListener,
 	}
 
 	private void initData() {
-		manager = ImageManager.from(getActivity());
+		app = (MyApplication) getActivity().getApplication();
+		imageLoader = app.getLoader();
 		videoList = new ArrayList<VideoFlowExt>();
 		adapter = new BroadcastAdapter();
 		btnLeftMenu.setOnClickListener(this);
 		btnContact.setOnClickListener(this);
-
 		service.VideoFlowAction
-				.getVideoListForNoLogin(System.currentTimeMillis())
+				.getVideoListForNoLogin(pagerHint)
 				.onSuccess(this).onFail(this);
+		boolean pauseOnScroll = false;
+		boolean pauseOnFling = true; 
+		PauseOnScrollListener listener = new PauseOnScrollListener(imageLoader, pauseOnScroll, pauseOnFling);
+		listView.setOnScrollListener(listener);
 	}
 
 	private void initView(View view) {
@@ -126,8 +135,9 @@ public class BroadcastFragment extends BaseFragment implements OnClickListener,
 				holder = (ViewHolder) convertView.getTag();
 			}
 			VideoFlowExt video = videoList.get(position);
-			manager.displayImage(holder.avatar,
-					ParseUtil.parseImageFit(video.headerPic), 0);
+//			manager.displayImage(holder.avatar,
+//					ParseUtil.parseImageFit(video.headerPic), 0);
+			imageLoader.displayImage(ParseUtil.parseImageFit(video.headerPic), holder.avatar);
 			holder.videoName.setText(video.videoName);
 			holder.soundName.setText(video.musicName);
 			holder.timeStamp.setText(DateUtil.dateToString(video.timeStamp));
@@ -186,9 +196,9 @@ public class BroadcastFragment extends BaseFragment implements OnClickListener,
 	@Override
 	public void onGetVideoListForNoLoginSuccess(VideoFlowExt[] result) {
 		videoList = new ArrayList<VideoFlowExt>(Arrays.asList(result));
-		System.out.println(videoList.size());
 		adapter.notifyDataSetChanged();
-
+		if(!videoList.isEmpty())
+			pagerHint = Long.parseLong(videoList.get(videoList.size()-1).createTime);
 	}
 
 	@Override
